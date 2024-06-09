@@ -31,3 +31,35 @@ body {
     text-wrap: balance;
   }
 } */
+
+.fadein{
+  animation: fadeIn 0.4s ease-in;
+}
+@keyframes fadeIn{
+  from {
+    transform: translate(0, -150px);
+    opacity: 1;
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+/* .fadeout{
+  animation: fadeOut 0.4s ease-in-out;
+}
+@keyframes fadeOut{
+  from {
+    transform: translate(0, 0);
+    visibility:visible;
+    display: absolute;
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, -200px);
+    visibility: hidden;
+    display: hidden;
+    opacity: 0;
+  }
+} */
