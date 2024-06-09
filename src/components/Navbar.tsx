@@ -14,7 +14,7 @@ export default function Navbar() {
                 <div className="grid grid-cols-2 h-16 w-full bg-[#CA9271]">
                     <div className="flex items-center md:ml-14 sm:ml-14 ml-4">
                         <Image src={"/images/logo.jpeg"} alt={"logo"} width={50} height={50} />
-                        <Link href={"/"}><p className="md:text-xl sm:text-xl text-base font-bold m-auto text-white">Langkahsana.id</p></Link>
+                        <Link href={"/"}><p className="md:text-xl sm:text-xl text-base font-bold m-auto text-white">Langkahsana</p></Link>
                     </div>
                     <div className="flex justify-end items-center">
                         <div className="md:hidden sm:hidden xl:hidden block" onClick={(e) => setOn(!on)}>
