@@ -47,9 +47,12 @@ export function CustomFooter() {
                         </div>
                     </div>
                     <Footer.Divider />
-                    <div className="w-full sm:flex sm:items-center sm:justify-between">
-                        <Footer.Copyright href="/" by="Langkahsana™" year={2024} />
-                        <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
+                    <div className="w-full sm:flex sm:items-center sm:justify-between justify-center">
+                        <div className="flex md:justify-start sm:justify-start justify-center w-full">
+                        <Footer.Copyright href="/" by="Langkahsana™" year={2024} className="text-center"/>
+                        </div>
+                        
+                        <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center justify-center">
                             <Footer.Icon href="#" icon={BsFacebook} className="text-white [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]"/>
                             <Footer.Icon href="#" icon={BsInstagram} className="text-white [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]"/>
                             <Footer.Icon href="#" icon={BsTwitter} className="text-white [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]"/>
