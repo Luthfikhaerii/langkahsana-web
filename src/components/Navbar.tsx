@@ -41,7 +41,7 @@ export default function Navbar() {
 
                 </div>
             </div>
-            <div className={` md:hidden sm:hidden xl:hidden fixed z-30 ${on ? "top-[62px] fadein" : "ease-in-out top-[-97px] duration-700"} w-screen  bg-[#CA9271]`}>
+            <div className={` md:hidden sm:hidden xl:hidden fixed z-30 ${on ? "top-[60px] fadein" : "ease-in-out top-[-105px] duration-700"} w-screen  bg-[#CA9271]`}>
                 <div className="flex justify-center">
                     <div className="grid grid-cols-1 justify-items-center items-center">
                         <Link href={"/"}><p className="border-b-[1px] hover:text-gray-400 py-2 w-screen text-center text-white text-base [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]">Home</p></Link>
