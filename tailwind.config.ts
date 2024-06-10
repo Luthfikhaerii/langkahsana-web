@@ -9,6 +9,14 @@ const config: Config = {
     flowbite.content(),
   ],
   theme: {
+    colors: {
+      transparent: 'transparent',
+      current: 'currentColor',
+      'coklat': '#CA9271',
+      'coklat-muda': '#FFE8D1',
+      'coklat-tua': '#925F41',
+      'hijau': '#005B47'
+    },
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
