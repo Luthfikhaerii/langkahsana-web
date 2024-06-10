@@ -39,20 +39,22 @@ export default function Navbar() {
                         </div>
                     </div>
                 </div>
-                <div className="md:h-3 sm:h-3 h-3 w-screen bg-[#c7ac9b] z-20">
+                <div className="md:h-3 sm:h-3 h-0 w-screen bg-[#c7ac9b] z-20">
 
                 </div>
             </div>
-            <div className={` md:hidden sm:hidden xl:hidden ${on ? "absolute z-30 top-[76px] " : "hidden"} w-screen fadein bg-[#CA9271]`}>
+            <div className={` md:hidden sm:hidden xl:hidden fixed z-30 ${on ? "top-[62px] fadein" : "ease-in-out top-[-97px] duration-700"} w-screen  bg-[#CA9271]`}>
                 <div className="flex justify-center">
                     <div className="grid grid-cols-1 justify-items-center items-center">
                         <Link href={"/"}><p className="border-b-[1px] hover:text-gray-400 py-2 w-screen text-center text-white text-base [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]">Home</p></Link>
                         <Link href={"/"}><p className="border-b-[1px] hover:text-gray-400 py-2 w-screen text-center text-white text-base [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]">Journal</p></Link>
                         <Link href={"/"}><p className="border-b-[1px] hover:text-gray-400 py-2 w-screen text-center text-white text-base [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]">About</p></Link>
-                        <Link href={"/"}><p className="border-b-[1px] hover:text-gray-400 py-2 w-screen text-center text-white text-base [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]">Contact</p></Link>
+                        <Link href={"/"}><p className=" hover:text-gray-400 py-2 w-screen text-center text-white text-base [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]">Contact</p></Link>
                     </div>
                 </div>
+                <div className="md:h-3 sm:h-3 h-3 w-screen bg-[#c7ac9b] z-20">
 
+                </div>
             </div>
         </div>
     )

@@ -53,14 +53,8 @@ body {
 @keyframes fadeOut{
   from {
     transform: translate(0, 0);
-    visibility:visible;
-    display: absolute;
-    opacity: 0;
   }
   to {
-    transform: translate(0, -200px);
-    visibility: hidden;
-    display: hidden;
-    opacity: 0;
+    transform: translate(0, -150px);
   }
-} */
+}  */
