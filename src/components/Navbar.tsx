@@ -24,8 +24,6 @@ export default function Navbar() {
                                 <div className="w-6 h-1 bg-white mb-1 rounded-sm"></div>
                             </div>
                         </div>
-
-
                         <div className="md:inline-block sm:block xl:block hidden w-full justify-end ">
                             <div className="flex justify-end">
                                 <div className="grid md:grid-cols-4 md:gap-5 md:justify-items-center items-center w-8/12 mr-14">
