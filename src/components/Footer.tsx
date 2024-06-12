@@ -19,7 +19,7 @@ export function CustomFooter() {
                             </div>
                            <p className="px-1 md:mt-4 sm:mt-4 mt-1 mb-10 md:w-7/12 sm:w-7/12 w-full md:text-base sm:text-base text-sm [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]">Langkahsana siap bawa kamu jalan-jalan ke alam bareng strangers. Siapin diri kalian karena bakal seru banget!</p>
                         </div>
-                        <div className="grid grid-cols-2 gap-8 sm:mt-4 sm:grid-cols-3 sm:gap-6">
+                        <div className="grid grid-cols-2 gap-8 sm:mt-4 sm:grid-cols-3 sm:gap-6 [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]">
                             <div>
                                 <Footer.Title title="Navigation" className="text-white [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]" />
                                 <Footer.LinkGroup col>

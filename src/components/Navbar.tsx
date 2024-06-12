@@ -11,7 +11,7 @@ export default function Navbar() {
     return (
         <div className={inter.className}>
             <div className="fixed z-40">
-                <div className="grid grid-cols-2 h-16 w-full bg-[#CA9271]">
+                <div className="grid grid-cols-2 h-16 w-screen bg-[#CA9271]">
                     <div className="flex items-center md:ml-14 sm:ml-14 ml-4">
                         <Image src={"/images/logo.jpeg"} alt={"logo"} width={50} height={50} />
                         <Link href={"/"}><p className="md:text-xl sm:text-xl text-base font-bold m-auto text-white">Langkahsana</p></Link>
@@ -37,11 +37,8 @@ export default function Navbar() {
                         </div>
                     </div>
                 </div>
-                <div className="md:h-3 sm:h-3 h-0 w-screen bg-[#c7ac9b] z-20">
-
-                </div>
             </div>
-            <div className={` md:hidden sm:hidden xl:hidden fixed z-30 ${on ? "top-[60px] fadein" : "ease-in-out top-[-105px] duration-700"} w-screen  bg-[#CA9271]`}>
+            <div className={` md:hidden sm:hidden xl:hidden fixed z-30 ${on ? "top-[60px] fadein" : "ease-in-out top-[-130px] duration-700"} w-screen  bg-[#CA9271]`}>
                 <div className="flex justify-center">
                     <div className="grid grid-cols-1 justify-items-center items-center">
                         <Link href={"/"}><p className="border-b-[1px] hover:text-gray-400 py-2 w-screen text-center text-white text-base [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]">Home</p></Link>
@@ -50,9 +47,7 @@ export default function Navbar() {
                         <Link href={"/"}><p className=" hover:text-gray-400 py-2 w-screen text-center text-white text-base [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]">Contact</p></Link>
                     </div>
                 </div>
-                <div className="md:h-3 sm:h-3 h-3 w-screen bg-[#c7ac9b] z-20">
-
-                </div>
+                
             </div>
         </div>
     )
