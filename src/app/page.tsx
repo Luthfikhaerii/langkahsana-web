@@ -30,9 +30,9 @@ export default function Home() {
           <div className="w-full h-20 flex justify-center items-center">
             <Link href={"#"}>
               <div>
-                <p className="text-2xl font-semibold text-coklat-2tua">READ MORE</p>
+                <p className="md:text-2xl sm:text-2xl text-lg font-semibold text-coklat-2tua">READ MORE</p>
               </div>
-              <div className="h-1 w-full bg-coklat-2tua rounded-lg"></div>
+              <div className="md:h-1 sm:h-1 h-[2px] w-full bg-coklat-2tua rounded-lg"></div>
             </Link>
           </div>
         </div>
