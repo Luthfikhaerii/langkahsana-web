@@ -18,13 +18,14 @@ export default function Home() {
       {/* ABOUT */}
 
       <div className="flex md:flex-nowrap sm:flex-nowrap flex-wrap h-full content-start items-start">
-        <div className="h-full w-full">
-        <Image src={"/images/about_home.webp"} width={600} height={600} alt="foto" className=" polygon-md "/>
+        <div className="h-full w-full md:bg-white sm:bg-white bg-coklat-muda">
+        <Image src={"/images/about_home.webp"} width={600} height={600} alt="foto" className=" polygon-md md:inline-block sm:inline-block hidden"/>
+        <Image src={"/images/about_home.webp"} width={600} height={600} alt="foto" className=" polygon-xs md:hidden sm:hidden inline-block"/>
         </div>
         <div>
           <div className="bg-coklat-muda md:h-[275px] sm:h-[275px] h-full md:p-14 sm:p-10 p-8">
-            <h2 className="md:text-5xl sm:text-4xl text-3xl font-bold mb-5 text-coklat-tua">KITA LANGKAHSANA</h2>
-            <p className="text-coklat-tua md:text-xl sm:text-xl text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ab rem sit nesciunt consequatur vel labore optio harum error eaque magni nobis libero modi nihil, iure totam doloribus debitis reprehenderit incidunt maxime</p>
+            <h2 className="md:text-5xl sm:text-4xl text-2xl md:text-left sm:text-left text-center font-bold mb-5 text-coklat-tua">KITA LANGKAHSANA</h2>
+            <p className="text-coklat-tua md:text-xl sm:text-xl text-lg md:text-left sm:text-left text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ab rem sit nesciunt consequatur vel labore optio harum error eaque magni nobis libero modi nihil, iure totam doloribus debitis reprehenderit incidunt maxime</p>
           </div>
           <div className="w-full h-20 flex justify-center items-center">
             <Link href={"#"}>
