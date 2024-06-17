@@ -23,7 +23,7 @@ export default function Home() {
         <Image src={"/images/about_home.webp"} width={600} height={600} alt="foto" className=" polygon-xs md:hidden sm:hidden inline-block"/>
         </div>
         <div>
-          <div className="bg-coklat-muda md:h-[275px] sm:h-[275px] h-full md:p-14 sm:p-10 p-8">
+          <div className="bg-coklat-muda md:h-[275px] sm:h-[275px] h-full md:p-16 sm:p-14 p-8">
             <h2 className="md:text-5xl sm:text-4xl text-2xl md:text-left sm:text-left text-center font-bold mb-5 text-coklat-tua">KITA LANGKAHSANA</h2>
             <p className="text-coklat-tua md:text-xl sm:text-xl text-lg md:text-left sm:text-left text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ab rem sit nesciunt consequatur vel labore optio harum error eaque magni nobis libero modi nihil, iure totam doloribus debitis reprehenderit incidunt maxime</p>
           </div>
