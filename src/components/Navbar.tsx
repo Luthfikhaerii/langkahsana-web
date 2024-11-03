@@ -30,9 +30,9 @@ export default function Navbar() {
     return (
         <div className={inter.className}>
             <div className={`${direction=='up'?'top-0 ease-in-out duration-700':on?'top-0':'-top-16 ease-in-out duration-700'} fixed z-40`}>
-                <div className="grid grid-cols-2 h-16 w-screen bg-[#CA9271]">
+                <div className="grid grid-cols-2 h-16 w-screen bg-hijau-tua">
                     <div className="flex items-center md:ml-14 sm:ml-14 ml-4">
-                        <Image src={"/images/logo.jpeg"} alt={"logo"} width={50} height={50} />
+                        <Image src={"/images/logo.png"} alt={"logo"} width={50} height={50} />
                         <Link href={"/"}><p className="md:text-xl sm:text-xl text-base font-bold m-auto text-white">Langkahsana</p></Link>
                     </div>
                     <div className="flex justify-end items-center">
@@ -57,7 +57,7 @@ export default function Navbar() {
                     </div>
                 </div>
             </div>
-            <div className={` md:hidden sm:hidden xl:hidden fixed z-30 ${on ? "top-[60px] fadein" : "ease-in top-[-200px] duration-700"} w-screen  bg-[#CA9271]`}>
+            <div className={` md:hidden sm:hidden xl:hidden fixed z-30 ${on ? "top-[60px] fadein" : "ease-in top-[-200px] duration-700"} w-screen  bg-hijau-tua`}>
                 <div className="flex justify-center">
                     <div className="grid grid-cols-1 justify-items-center items-center">
                         <Link href={"/"}><p className="border-b-[1px] hover:text-gray-400 py-2 w-screen text-center text-white text-base [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]">Home</p></Link>

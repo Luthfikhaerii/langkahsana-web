@@ -9,12 +9,12 @@ const inter = Chivo_Mono({ subsets: ['latin'], weight: "700" });
 export function CustomFooter() {
     return (
         <div className={inter.className}>
-            <Footer container className="bg-[#CA9271]">
+            <Footer container className="bg-hijau-tua">
                 <div className="w-full">
                     <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
                         <div className="text-white  md:ml-0 sm:ml-0 ml-[-3px]">
                             <div className="flex items-center">
-                            <Image src={"/images/logo.jpeg"} alt={"logo"} width={60} height={60} />
+                            <Image src={"/images/logo.png"} alt={"logo"} width={60} height={60} />
                             <Link href={"/"}><p className="md:text-xl sm:text-xl text-base font-bold m-auto text-white">Langkahsana</p></Link>
                             </div>
                            <p className="px-1 md:mt-4 sm:mt-4 mt-1 mb-10 md:w-7/12 sm:w-7/12 w-full md:text-base sm:text-base text-sm [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]">Langkahsana siap bawa kamu jalan-jalan ke alam bareng strangers. Siapin diri kalian karena bakal seru banget!</p>

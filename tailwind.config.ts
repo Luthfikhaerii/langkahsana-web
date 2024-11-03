@@ -17,7 +17,8 @@ const config: Config = {
       'coklat-muda': '#FFE8D1',
       'coklat-2muda': '#F8F4E1',
       'coklat-tua': '#925F41',
-      'hijau': '#005B47'
+      'hijau': '#005B47',
+      'hijau-tua': '#1F584B'
     },
     extend: {
       backgroundImage: {
