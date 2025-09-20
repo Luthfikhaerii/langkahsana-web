@@ -1,7 +1,4 @@
 <script lang="ts" setup>
-definePageMeta({
-    layout:'auth'
-})
 
 function navigate(){
     navigateTo({
@@ -18,6 +15,8 @@ function navigate(){
 }
 </script>
 <template>
-    <button @click="navigate">Ke admin</button>
-<p>indexx</p>
+    <div class="">
+    <HeroHome/>
+    </div>
+
 </template>

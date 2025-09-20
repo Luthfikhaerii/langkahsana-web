@@ -1,8 +1,10 @@
 <script setup lang="ts">
-const admin = true
+import { useAuthStore } from '~/stores/auth';
+
+const {auth} = useAuthStore()
 </script>
 <template>
-    <slot v-if="admin" />
+    <slot v-if="auth" />
     <p v-else>bukan admin</p>
 
 </template>
