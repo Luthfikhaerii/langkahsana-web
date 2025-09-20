@@ -1,21 +1,13 @@
 <script setup lang="ts">
 import axios from 'axios';
-const trips = ref<any>([])
-const loading = ref(false)
+import { useTrips } from '~/composables/useTrip';
+const { trips, fetchTrips, error, loading } = useTrips()
 const page = ref(0)
 const limit = ref(0)
+const search = ref('')
 
-watch([page, limit], async () => {
-    loading.value = true
-    try {
-        const res = await axios.get(process.env.URL_API + '/api/trip')
-        trips.value = res.data.data
-    } catch (err) {
-        console.log(err)
-    } finally {
-        loading.value = false
-    }
-
+watch([page, search], async () => {
+    fetchTrips({ page: page.value, limit: limit.value, search: search.value })
 }, {
     immediate: true
 })

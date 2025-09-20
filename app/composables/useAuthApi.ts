@@ -1,7 +1,8 @@
 import axios from "axios"
+import { useAuthStore } from "~/stores/auth"
 
 export const useAuth = () => {
-    const user = useState('user', () => null as null | { role: string, email: string, auth: boolean })
+    const auth = useAuthStore()
     const error = ref<any>(null)
 
     async function login(data: { email: string, password: string }) {
@@ -10,11 +11,10 @@ export const useAuth = () => {
                 email: data.email,
                 password: data.password
             })
-            user.value = {
+            auth.setAuth({
                 role: res.data.data.role,
                 email: res.data.data.email,
-                auth: true
-            }
+            })
         } catch (err) {
             error.value = err
         }
@@ -22,8 +22,8 @@ export const useAuth = () => {
 
     async function logout(id: number) {
         try {
-            await axios.post(process.env.URL_API + '/api/user/login/' + id)
-            user.value = null
+            await axios.delete(process.env.URL_API + '/api/user/logout/' + id)
+            auth.clearAuth()
         } catch (err) {
             error.value = err
         }
@@ -31,20 +31,19 @@ export const useAuth = () => {
 
     async function getAuth() {
         try {
-            const res = await axios.get(process.env.URL_API + '/api/user/login', { withCredentials: true })
-            user.value = {
+            const res = await axios.get(process.env.URL_API + '/api/user/auth', { withCredentials: true })
+            auth.setAuth({
                 role: res.data.data.role,
-                email: res.data.data.email,
-                auth: true
-            }
+                email: res.data.data.email
+            })
         } catch (err) {
             error.value = err
         }
     }
 
-    if (!user?.value?.auth) {
+    if (!auth.auth) {
         getAuth()
     }
 
-    return { user, login, logout, error }
+    return { login, logout, error }
 }
