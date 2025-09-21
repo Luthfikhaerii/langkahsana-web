@@ -7,7 +7,7 @@ const tours = [
         date: "23 AUGUST - 29 AUGUST",
         price: "$285",
         rating: "4.9",
-        image: "https://source.unsplash.com/400x500/?bali,forest",
+        image: "~/assets/images/hero2.jpg",
     },
     {
         id: 2,
@@ -16,7 +16,7 @@ const tours = [
         date: "23 AUGUST - 27 AUGUST",
         price: "$218",
         rating: "4.9",
-        image: "https://source.unsplash.com/400x500/?mountain,river",
+        image: "~/assets/images/hero1.jpg",
     },
     {
         id: 3,
@@ -25,7 +25,7 @@ const tours = [
         date: "23 AUGUST - 25 AUGUST",
         price: "$163",
         rating: "4.9",
-        image: "https://source.unsplash.com/400x500/?palm,road",
+        image: "~/assets/images/hero2.jpg",
     },
 ];
 
@@ -47,10 +47,10 @@ function navigate() {
 <template>
     <div class="">
         <HeroHome />
-        <section class="py-16 px-20 bg-gray-50 ">
+        <section class="py-16 px-20 bg-gray-50 relative z-30 bg-white">
             <!-- Heading -->
             <div class="text-center px-10 w-full mx-auto mb-12 flex justify-between">
-                <h2 class="text-5xl font-bold mt-2">
+                <h2 class="text-4xl font-bold mt-2">
                     Article & Catatan Perjalanan
                 </h2>
                 <div>
@@ -69,7 +69,7 @@ function navigate() {
                 <div v-for="tour in tours" :key="tour.id"
                     class="relative w-full max-w-sm rounded-2xl overflow-hidden shadow-lg group">
                     <!-- Background image -->
-                    <img :src="tour.image" :alt="tour.title"
+                    <img src="~/assets/images/hero2.jpg" :alt="tour.title"
                         class="w-full h-96 object-cover group-hover:scale-105 transition duration-300" />
 
                     <!-- Overlay top -->

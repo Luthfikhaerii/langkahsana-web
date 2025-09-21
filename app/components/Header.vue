@@ -69,9 +69,9 @@ const isOpen = ref(false)
           <li>
             <NuxtLink
               to="/"
-              class="block ml-6 py-2 px-3 text-blue-600 md:p-0"
-              exact-active-class="text-blue-600"
-              active-class="text-blue-600"
+              class="block ml-6 py-2 px-3 text-langkahsana md:p-0"
+              exact-active-class="text-langkahsana"
+              active-class="text-langkahsana"
             >
               Home
             </NuxtLink>
@@ -83,7 +83,7 @@ const isOpen = ref(false)
           </li>
           <li>
             <NuxtLink
-              to="/services"
+              to="/article"
               class="block py-2 px-3 text-white md:p-0"
             >
               Services
@@ -91,7 +91,7 @@ const isOpen = ref(false)
           </li>
           <li>
             <NuxtLink
-              to="/pricing"
+              to="/trip"
               class="block py-2 px-3 text-white md:p-0"
             >
               Pricing
