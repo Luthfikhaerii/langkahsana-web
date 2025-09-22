@@ -13,6 +13,7 @@ watch([page, search], async () => {
 })
 </script>
 <template>
+    <HeroCustom src="/images/hero1.jpg"/>
     <div>
         <div v-for="trip in trips" :key="trip.id">
             <p>{{ trip.title }}</p>
