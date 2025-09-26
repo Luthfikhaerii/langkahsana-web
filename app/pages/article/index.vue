@@ -29,8 +29,8 @@ const options = [
 </script>
 <template>
     <HeroCustom src="/images/hero1.jpg" />
-    <section class="py-24 px-28 relative bg-white z-30 min-h-screen">
-        <div class="text-center w-full mx-auto mb-8 flex justify-between ">
+    <section class="py-24 px-28 relative bg-white z-30 min-h-screen ">
+        <div class="text-center w-full mx-auto mb-8 flex justify-between max-w-screen-xl">
             <h2 class="text-4xl font-bold">
                 Kumpulan Artikel
             </h2>
@@ -44,7 +44,7 @@ const options = [
             </div>
 
         </div>
-        <div class="w-full mb-8 flex justify-between items-end">
+        <div class="w-full mb-8 flex justify-between items-end max-w-screen-xl mx-auto">
 
             <input type="text" placeholder="search..."
                 class="w-96 px-4 py-2 h-10  border rounded-xl border-gray-400 shadow-md" />
@@ -61,7 +61,7 @@ const options = [
                 </select>
             </div>
         </div>
-        <div class="grid grid-cols-4 gap-10">
+        <div class="grid grid-cols-4 gap-10 max-w-screen-xl mx-auto">
             <CardArticle />
             <CardArticle />
             <CardArticle />

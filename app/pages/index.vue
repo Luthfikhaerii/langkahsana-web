@@ -1,4 +1,7 @@
 <script lang="ts" setup>
+import axios from 'axios';
+
+const config = useRuntimeConfig()
 const tours = [
     {
         id: 1,
@@ -30,25 +33,53 @@ const tours = [
 ];
 
 
-function navigate() {
-    navigateTo({
-        name: 'article-id',
-        params: {
-            id: 1
-        },
-        // name:'admin-article-id',
-        // query: {
-        //     name:"apa",
-        //     location:"apa"
-        // }
-    })
+const articles = ref<any[]>([])
+const trips = ref<any[]>([])
+
+const getArticle = async ()=>{
+    try{
+        const res = await axios.get(config.public.URL_API+"/article",{
+            params:{
+                page:1,
+                limit:4
+            }
+        })
+        articles.value = res.data.data
+        console.log(res.data)
+    }catch(error){
+        console.log(error)
+    }
 }
+
+const getTrip = async ()=>{
+    try{
+        const res = await axios.get(config.public.URL_API+"/trip",{
+            params:{
+                page:1,
+                limit:3
+            }
+        })
+        trips.value = res.data.data
+        console.log(trips.value)
+    }catch(error){
+        console.log(error)
+    }
+}
+
+onMounted(() => {
+    getArticle()
+    getTrip()
+    console.log(trips.value)
+    
+    console.log('mounted')
+})
+
 </script>
 <template>
     <HeroHome />
     <section class="py-24 px-28 bg-gray-50 relative z-30 bg-white">
         <!-- Heading -->
-        <div class="text-center w-full mx-auto mb-8 flex justify-between">
+        <div class="text-center w-full mx-auto mb-8 flex justify-between max-w-screen-xl">
             <h2 class="text-4xl font-bold">
                 Open Trip & Event
             </h2>
@@ -64,32 +95,13 @@ function navigate() {
         </div>
 
         <!-- Cards -->
-        <div class="flex justify-between gap-6 place-items-center">
-            <div v-for="tour in tours" :key="tour.id"
-                class="relative w-full max-w-sm rounded-2xl overflow-hidden shadow-lg group">
-                <!-- Background image -->
-                <img src="/images/hero2.jpg" :alt="tour.title"
-                    class="w-full h-96 object-cover group-hover:scale-105 transition duration-300" />
-
-                <!-- Overlay top -->
-                <div class="absolute top-4 left-4 bg-white/80 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">
-                    {{ tour.days }}
-                </div>
-                <div
-                    class="absolute top-4 right-4 bg-white/80 text-gray-800 text-sm font-medium px-3 py-1 rounded-full flex items-center gap-1">
-                    ⭐ {{ tour.rating }}
-                </div>
-
-                <!-- Overlay bottom -->
-                <div
-                    class="absolute bottom-0 w-full bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4 text-white">
-                    <p class="text-sm">{{ tour.date }}</p>
-                    <div class="flex justify-between items-center mt-1">
-                        <h3 class="font-semibold">{{ tour.title }}</h3>
-                        <span class="font-bold">{{ tour.price }}</span>
-                    </div>
-                </div>
-            </div>
+        <div class="flex justify-between gap-6 place-items-center max-w-screen-xl">
+            <CardTrip v-if="trips" v-for="trip in trips" :key="trip.id"
+                :title="trip.title" 
+                :date="trip.date" 
+                status="OPEN" 
+                :price="trip.price" 
+                :image="trip.image"/>
         </div>
 
         <!-- Button -->
@@ -101,7 +113,7 @@ function navigate() {
     </section>
     <section class="px-28 z-30 bg-white relative">
         <!-- Heading -->
-        <div class="max-w-5xl mx-auto text-center mb-12">
+        <div class="max-w-5xl mx-auto text-center mb-12 max-w-screen-xl">
             <h2 class="text-4xl font-bold text-gray-900">Indonesian tourism</h2>
             <p class="mt-4 text-gray-500">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit, libero. Extraordinary natural
@@ -112,7 +124,7 @@ function navigate() {
         </div>
 
         <!-- Grid -->
-        <div class="grid md:grid-cols-5 gap-6 w-full mx-auto ">
+        <div class="grid md:grid-cols-5 gap-6 w-full mx-auto max-w-screen-xl">
             <!-- Card 1 -->
             <div class="relative rounded-2xl overflow-hidden col-span-3">
                 <img src="/images/hero2.jpg" alt="Bromo" class="w-full h-64 object-cover">
@@ -152,7 +164,7 @@ function navigate() {
     </section>
     <section class="px-28 py-24 bg-white">
         <!-- Heading -->
-        <div class="text-center w-full mx-auto mb-8 flex justify-between items-start">
+        <div class="text-center w-full mx-auto mb-8 flex justify-between items-start max-w-screen-xl">
             <div>
                 <p class="text-base text-gray-600">
                     Our tourist destinations offer an unrivaled blend of natural beauty
@@ -170,56 +182,12 @@ function navigate() {
         </div>
 
         <!-- Grid (3 Card) -->
-        <div class="flex justify-between gap-6 mx-auto">
-            <!-- Card 1 -->
-            <div class="relative rounded-2xl overflow-hidden shadow-lg w-72">
-                <img src="/images/hero2.jpg" alt="Bromo"
-                    class="w-72 h-48 object-cover relative z-40 rounded-xl">
-                <div class="bg-white px-6 pt-4 pb-6">
-                    <p class="text-[10px] text-gray-300">Senin, 12 September 2025</p>
-                    <h3 class="text-base font-semibold text-gray-800 mb-2 line-clamp-2">Bromo Tengger Tour dfsd dsfdf
-                        sdfsd</h3>
-                    <p class="text-xs text-gray-400 line-clamp-2">Bromo Tengger Tour Lorem ipsum, dolor sit amet
-                        consectetur adipisicing elit. Voluptatem, tempore?</p>
-                </div>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="relative rounded-2xl overflow-hidden shadow-lg w-72">
-                <img src="/images/hero2.jpg" alt="Bromo"
-                    class="w-72 h-48 object-cover relative z-40 rounded-xl">
-                <div class="bg-white px-6 pt-4 pb-6">
-                    <p class="text-[10px] text-gray-300">Senin, 12 September 2025</p>
-                    <h3 class="text-base font-semibold text-gray-800 mb-2 line-clamp-2">Bromo Tengger Tour dfsd dsfdf
-                        sdfsd</h3>
-                    <p class="text-xs text-gray-400 line-clamp-2">Bromo Tengger Tour Lorem ipsum, dolor sit amet
-                        consectetur adipisicing elit. Voluptatem, tempore?</p>
-                </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="relative rounded-2xl overflow-hidden shadow-lg w-72">
-                <img src="/images/hero2.jpg" alt="Bromo"
-                    class="w-72 h-48 object-cover relative z-40 rounded-xl">
-                <div class="bg-white px-6 pt-4 pb-6">
-                    <p class="text-[10px] text-gray-300">Senin, 12 September 2025</p>
-                    <h3 class="text-base font-semibold text-gray-800 mb-2 line-clamp-2">Bromo Tengger Tour dfsd dsfdf
-                        sdfsd</h3>
-                    <p class="text-xs text-gray-400 line-clamp-2">Bromo Tengger Tour Lorem ipsum, dolor sit amet
-                        consectetur adipisicing elit. Voluptatem, tempore?</p>
-                </div>
-            </div>
-            <div class="relative rounded-2xl overflow-hidden shadow-lg w-72">
-                <img src="/images/hero2.jpg" alt="Bromo"
-                    class="w-72 h-48 object-cover relative z-40 rounded-xl">
-                <div class="bg-white px-6 pt-4 pb-6">
-                    <p class="text-[10px] text-gray-300">Senin, 12 September 2025</p>
-                    <h3 class="text-base font-semibold text-gray-800 mb-2 line-clamp-2">Bromo Tengger Tour dfsd dsfdf
-                        sdfsd</h3>
-                    <p class="text-xs text-gray-400 line-clamp-2">Bromo Tengger Tour Lorem ipsum, dolor sit amet
-                        consectetur adipisicing elit. Voluptatem, tempore?</p>
-                </div>
-            </div>
+        <div class="flex justify-between gap-6 mx-auto max-w-screen-xl">
+            <CardArticle v-if="articles" v-for="article in articles" :key="article.id"
+                :title="article.title" 
+                :date="new Date(article.date)" 
+                :description="article.description" 
+                :image="article.image"/>
         </div>
         <div class="flex justify-center mt-10">
             <button class="px-6 py-3 bg-black text-white rounded-full hover:bg-gray-800 transition">

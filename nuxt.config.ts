@@ -9,15 +9,9 @@ export default defineNuxtConfig({
   tailwindcss: {
     configPath: '~/tailwind.config.ts', // Adjust path as needed
   },
-  // image: {
-  //   domains: ['source.unsplash.com', 'images.unsplash.com', 'mycdn.com'],
-  // }
-  // components:{
-  //   dirs:[
-  //     {
-  //       path:'~/components',
-  //       pathPrefix:false
-  //     }
-  //   ]
-  // }
+  runtimeConfig: {
+    public: {
+      URL_API: process.env.URL_API || 'http://localhost:8000/api'
+    }
+  },
 })

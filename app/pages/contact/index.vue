@@ -1,7 +1,7 @@
 <template>
     <HeroCustom src="/images/hero1.jpg" />
     <section class="py-24 px-28 relative bg-white z-30 min-h-screen">
-        <div class="grid grid-cols-2 gap-10">
+        <div class="grid grid-cols-2 gap-10 max-w-screen-xl mx-auto">
 
             <div>
                 <div class="mb-6">
