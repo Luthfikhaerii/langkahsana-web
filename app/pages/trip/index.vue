@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import axios from 'axios';
 import { useTrips } from '~/composables/useTrip';
-const { trips, fetchTrips, error, loading } = useTrips()
-const page = ref(0)
-const limit = ref(0)
+
+const config = useRuntimeConfig()
+const page = ref(1)
+const limit = ref(12)
 const search = ref('')
 
 const sortType = ref('newest') // default pilihan
@@ -15,11 +16,22 @@ const options = [
     { value: 'z-a', label: 'Z → A' }
 ]
 
-watch([page, search], async () => {
-    fetchTrips({ page: page.value, limit: limit.value, search: search.value })
-}, {
-    immediate: true
-})
+const {data:trips} = await useAsyncData(
+    ()=> `trip-${page}-${search}`,
+    ()=> axios.get(config.public.URL_API+"/trip",{
+        params:{
+            page:page.value,
+            limit:limit.value,
+            search:search.value
+        }
+    }).then(res=>res.data.data),
+    {
+        watch:[page,search]
+    }
+)
+
+
+
 </script>
 <template>
     <HeroCustom src="/images/hero1.jpg" />
@@ -56,12 +68,7 @@ watch([page, search], async () => {
             </div>
         </div>
         <div class="grid grid-cols-4 gap-10 max-w-screen-xl mx-auto">
-            <CardArticle />
-            <CardArticle />
-            <CardArticle />
-            <CardArticle />
-            <CardArticle />
-            <CardArticle />
+            <CardTrip v-for="value in trips" :key="value.id" :title="value.title" :image="value.image" status="OPEN" :price="value.price" />
         </div>
         <div class="mt-16 w-full flex justify-center">
             <Pagination />
