@@ -55,13 +55,10 @@ if (error.value) {
                     and cultural richness
                 </p>
             </div>
-
         </div>
         <div class="w-full mb-8 flex justify-between items-end max-w-screen-xl mx-auto">
-
             <input type="text" placeholder="search..."
                 class="w-96 px-4 py-2 h-10  border rounded-xl border-gray-400 shadow-md" />
-
             <div class="w-48">
                 <label for="sort" class="block mb-2 text-sm font-medium text-gray-700">
                     Sort by
@@ -75,8 +72,7 @@ if (error.value) {
             </div>
         </div>
         <div class="grid grid-cols-4 gap-10 max-w-screen-xl mx-auto">
-            <CardArticle v-for="value in articles.data" :key="value.id" :title="value.title" :description="value.description"
-                :date="new Date(value.date)" :image="value.image" />
+            <CardArticle v-for="value in articles.data" :key="value.id" :title="value.title" :description="value.description" :date="new Date(value.date)" :image="value.image" />
         </div>
         <div class="mt-16 w-full flex justify-center">
             <VueAwesomePaginate :total-items="articles?.total" :items-per-page="12" :max-pages-shown="3" v-model="page" @click="onClickHandler" />
