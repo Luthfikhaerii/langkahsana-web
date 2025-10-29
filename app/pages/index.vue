@@ -127,7 +127,7 @@ onMounted(() => {
         <div class="grid md:grid-cols-5 gap-6 w-full mx-auto max-w-screen-xl">
             <!-- Card 1 -->
             <div class="relative rounded-2xl overflow-hidden col-span-3">
-                <img src="/images/hero2.jpg" alt="Bromo" class="w-full h-64 object-cover">
+                <img src="/images/gunung1.jpg" alt="Bromo" class="w-full h-64 object-cover">
                 <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
                     <p class="text-sm text-gray-200">Bromo, East Java</p>
                     <h3 class="text-lg font-semibold text-white">Bromo Tengger Tour</h3>
@@ -136,7 +136,7 @@ onMounted(() => {
 
             <!-- Card 2 -->
             <div class="relative rounded-2xl overflow-hidden col-span-2">
-                <img src="/images/hero2.jpg" alt="Bali" class="w-full h-64 object-cover">
+                <img src="/images/gunung2.webp" alt="Bali" class="w-full h-64 object-cover">
                 <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
                     <p class="text-sm text-gray-200">Denpasar, Bali</p>
                     <h3 class="text-lg font-semibold text-white">Bali Beach Tourism</h3>
@@ -187,7 +187,7 @@ onMounted(() => {
                 :title="article.title" 
                 :date="new Date(article.date)" 
                 :description="article.description" 
-                :image="article.image"/>
+                image="/images/hero2.jpg"/>
         </div>
         <div class="flex justify-center mt-10">
             <button class="px-6 py-3 bg-black text-white rounded-full hover:bg-gray-800 transition">

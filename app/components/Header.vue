@@ -27,8 +27,8 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <nav :class="['x-10 top-0 min-w-screen h-20 z-50 fixed w-full flex items-center transition duration-200',scrolled? 'bg-white shadow-sm border-b border-gray-200':'bg-transparent']">
-    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 w-full">
+  <nav :class="['x-10 top-0 min-w-screen h-16 z-50 fixed w-full flex items-center transition duration-200',scrolled? 'bg-white shadow-sm border-b border-gray-200':'bg-transparent']">
+    <div class="max-w-7xl flex flex-wrap items-center justify-between mx-auto py-2 px-8  w-full">
       <!-- Logo -->
       <NuxtLink to="/" class="flex items-center space-x-2">
         <!-- <img src="" class="h-8" alt="Flowbite Logo" /> -->
@@ -55,38 +55,25 @@ onUnmounted(() => {
         isOpen ? 'block' : 'hidden'
       ]">
         <ul
-          :class="['flex flex-col md:p-0 mt-4 font-medium border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:border-0  rounded-full h-12 flex items-center  shadow-sm border-2 border-gray-50 backdrop-blur-md',scrolled?'bg-langkahsana/90 text-white':'bg-white/10']">
+          :class="['flex flex-col p-2 mt-4 font-medium border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:border-0  rounded-full flex items-center  shadow-sm border-2 border-gray-50 backdrop-blur-md',scrolled?'bg-langkahsana/90 text-white':'bg-white/10']">
           <li>
-            <!-- <NuxtLink to="/" class="block ml-6 py-2 px-3 text-langkahsana md:p-0" exact-active-class="text-langkahsana"
-              active-class="text-langkahsana"
-              >
-              Home
-            </NuxtLink> -->
-            <NuxtLink to="/" class="block ml-6 py-2 px-3 text-white md:p-0"
+            <NuxtLink to="/" class="block ml-6 py-2 px-3 text-white text-sm md:p-0"
               >
               Home
             </NuxtLink>
           </li>
           <li>
-            <NuxtLink to="/article" class="block py-2 px-3 text-white md:p-0">
+            <NuxtLink to="/article" class="block py-2 px-3 text-white text-sm md:p-0">
               Article
             </NuxtLink>
           </li>
           <li>
-            <NuxtLink to="/trip" class="block py-2 px-3 text-white md:p-0">
+            <NuxtLink to="/trip" class="block py-2 px-3 text-white text-sm md:p-0">
               Event
             </NuxtLink>
           </li>
-          <!-- <li>
-            <NuxtLink
-              to="/trip"
-              class="block py-2 px-3 text-white md:p-0"
-            >
-              Pricing
-            </NuxtLink>
-          </li> -->
           <li>
-            <NuxtLink to="/contact" class="block py-2 px-3 text-white md:p-0 mr-6">
+            <NuxtLink to="/contact" class="block py-2 px-3 text-white text-sm md:p-0 mr-6">
               Contact
             </NuxtLink>
           </li>

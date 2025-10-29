@@ -10,7 +10,7 @@ const { title, date, status, price, image } = defineProps([
 <template>
     <div class="relative w-full max-w-sm rounded-2xl overflow-hidden shadow-lg group">
         <!-- Background image -->
-        <img :src="image" :alt="title" class="w-full h-96 object-cover group-hover:scale-105 transition duration-300" />
+        <img src="/images/hero2.jpg" :alt="title" class="w-full h-96 object-cover group-hover:scale-105 transition duration-300" />
 
         <!-- Overlay top -->
         <div class="absolute top-4 left-4 bg-white/80 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">

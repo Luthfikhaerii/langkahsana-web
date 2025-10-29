@@ -8,7 +8,7 @@ const { title, date, description, image } = defineProps([
 </script>
 <template>
     <div class="relative rounded-2xl overflow-hidden shadow-lg w-72">
-        <img :src="image" :alt="title" class="w-72 h-48 object-cover relative z-40 rounded-xl">
+        <img src="/images/hero2.jpg" :alt="title" class="w-72 h-48 object-cover relative z-40 rounded-xl">
         <div class="bg-white px-6 pt-4 pb-6">
             <p class="text-[10px] text-gray-400">{{ date?.toLocaleDateString('id-ID', {
                 weekday: "long", // "Senin"
