@@ -3,9 +3,18 @@ export default defineNuxtConfig({
   imports:{
     autoImport:true
   },
+  googleFonts: {
+    families: {
+      'Rubik+Distressed': true,
+      'Funnel+Sans': true,
+    },
+    display: 'swap',
+    preconnect: true,
+    preload: true,
+  },
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss','@nuxt/image'],
+  modules: ['@nuxtjs/tailwindcss','@nuxt/image','@nuxtjs/google-fonts'],
   tailwindcss: {
     configPath: '~/tailwind.config.ts', // Adjust path as needed
   },

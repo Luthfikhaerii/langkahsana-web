@@ -5,7 +5,11 @@ export default {
     extend: {
       colors:{
         langkahsana: '#1E584C',
-      }
+      },
+      fontFamily: {
+      inter: ['Inter', 'sans-serif'],
+      distressed: ['"Rubik Distressed"', 'cursive'],
+    },
     },
   },
   plugins: [],
