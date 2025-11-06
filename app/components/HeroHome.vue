@@ -39,7 +39,4 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
   </section>
 </template>
 <style lang="css" scoped>
-.diss {
-  font-family: 'Funnel Sans', sans-serif;
-}
 </style>

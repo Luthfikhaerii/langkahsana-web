@@ -36,20 +36,6 @@ const {data:trips} = await useAsyncData(
 <template>
     <HeroCustom src="/images/hero1.jpg" />
     <section class="py-24 px-28 relative bg-white z-30 min-h-screen">
-        <div class="text-center w-full mx-auto mb-8 flex justify-between max-w-screen-xl mx-auto">
-            <h2 class="text-4xl font-bold">
-                List Event
-            </h2>
-            <div>
-                <p class="text-base text-gray-600">
-                    Our tourist destinations offer an unrivaled blend of natural beauty
-                </p>
-                <p class="text-base text-start text-gray-600">
-                    and cultural richness
-                </p>
-            </div>
-
-        </div>
         <div class="w-full mb-8 flex justify-between items-end max-w-screen-xl mx-auto">
 
             <input type="text" placeholder="search..."
@@ -67,17 +53,11 @@ const {data:trips} = await useAsyncData(
                 </select>
             </div>
         </div>
-        <div class="grid grid-cols-4 gap-10 max-w-screen-xl mx-auto">
-            <CardTrip v-for="value in trips" :key="value.id" :title="value.title" :image="value.image" status="OPEN" :price="value.price" />
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <CardTrip />
         </div>
         <div class="mt-16 w-full flex justify-center">
             <Pagination />
         </div>
-        <!-- <div class="">
-            <div v-for="article in articles" :key="article.id">
-                <p>{{ article.title }}</p>
-                <p>{{ article.date }}</p>
-            </div>
-        </div> -->
     </section>
 </template>

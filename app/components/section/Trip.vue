@@ -1,12 +1,34 @@
-<script setup lang="ts">
-const { title, date, status, price, image } = defineProps([
-    'title',
-    'date',
-    'status',
-    'price',
-    'image'
-])
-const trip =  {
+<script setup>
+const trips = [
+  {
+    id: 1,
+    title: "Gunung Semeru",
+    location: "Jawa Timur",
+    date: "15–17 November 2025",
+    duration: "3 Hari 2 Malam",
+    participants: "12/20 peserta",
+    price: "Rp 1.200.000",
+    status: "Sulit",
+    image:
+      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=60",
+    description:
+      "Pendakian ke Mahameru, puncak tertinggi di Pulau Jawa dengan pemandangan kawah Jonggring Saloko yang memukau.",
+  },
+  {
+    id: 2,
+    title: "Gunung Rinjani",
+    location: "Lombok, NTB",
+    date: "22–25 November 2025",
+    duration: "4 Hari 3 Malam",
+    participants: "8/15 peserta",
+    price: "Rp 1.500.000",
+    status: "Sulit",
+    image:
+      "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=900&q=60",
+    description:
+      "Jelajahi keindahan Danau Segara Anak dan nikmati sunrise dari puncak gunung tertinggi kedua di Indonesia.",
+  },
+  {
     id: 3,
     title: "Gunung Prau",
     location: "Jawa Tengah",
@@ -19,11 +41,18 @@ const trip =  {
       "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=900&q=60",
     description:
       "Pendakian santai dengan pemandangan sunrise spektakuler dan bukit-bukit teletubbies yang ikonik.",
-}
-
+  },
+];
 </script>
 <template>
-    <div
+  <section class="bg-[#FAFAFA] py-16 px-8 lg:px-16 relative z-10">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-3xl font-bold mb-10">OUR TRIP</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div
+          v-for="trip in trips"
+          :key="trip.id"
           class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition"
         >
           <div class="relative">
@@ -77,4 +106,11 @@ const trip =  {
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
 </template>
+
+<style scoped>
+/* Optional tambahan styling */
+</style>

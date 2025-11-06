@@ -14,7 +14,7 @@ export default defineNuxtConfig({
   },
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss','@nuxt/image','@nuxtjs/google-fonts'],
+  modules: ['@nuxtjs/tailwindcss','@nuxt/image','@nuxtjs/google-fonts','@nuxt/icon'],
   tailwindcss: {
     configPath: '~/tailwind.config.ts', // Adjust path as needed
   },

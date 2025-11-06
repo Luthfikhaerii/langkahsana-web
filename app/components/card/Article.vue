@@ -7,17 +7,24 @@ const { title, date, description, image } = defineProps([
 ])
 </script>
 <template>
-    <div class="relative rounded-2xl overflow-hidden shadow-lg w-72">
-        <img src="/images/hero2.jpg" :alt="title" class="w-72 h-48 object-cover relative z-40 rounded-xl">
-        <div class="bg-white px-6 pt-4 pb-6">
-            <p class="text-[10px] text-gray-400">{{ date?.toLocaleDateString('id-ID', {
-                weekday: "long", // "Senin"
-                year: "numeric", // "2025"
-                month: "long", // "September"
-                day: "numeric" // "26"
-                }) }}</p>
-            <h3 class="leading-sm text-base font-semibold text-gray-800 my-2 line-clamp-2">{{ title }}</h3>
-            <p class="text-xs text-gray-500 line-clamp-2" v-html="description"></p>
-        </div>
-    </div>
+     <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80"
+                        alt="Gunung Semeru" class="w-full h-56 object-cover" />
+                    <div class="p-6 text-left">
+                        <span
+                            class="inline-block bg-[#EAF3EE] text-[#1E584C] text-sm font-semibold px-3 py-1 rounded-full mb-3">
+                            Trip Report
+                        </span>
+                        <h3 class="text-lg font-semibold mb-2">
+                            Pengalaman Mendaki Gunung Semeru
+                        </h3>
+                        <div class="flex items-center text-xs text-gray-600 mb-2">
+                            <Icon name="mdi:calendar-month-outline" size="16" /> <span class="ml-2">20 Oktober 2025</span>
+                        </div>
+                        <p class="mb-4 text-sm text-gray-600">
+                            Catatan perjalanan mendaki Mahameru, atap Pulau Jawa yang menawan
+                            dengan segala tantangan dan keindahannya.
+                        </p>
+                    </div>
+                </div>
 </template>
