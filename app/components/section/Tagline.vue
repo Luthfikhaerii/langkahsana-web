@@ -2,10 +2,10 @@
 // Tidak perlu script tambahan
 </script>
 <template>
-  <section class="bg-[#DDDBCD] text-black pt-20 text-center">
+  <section class="bg-[#DDDBCD] text-black my-8 text-center">
     <div class="w-full mx-auto">
       <!-- Subheading -->
-      <p class="text-sm md:text-base font-medium mb-4">
+      <p class="text-sm md:text-base font-medium mb-4 pt-16">
         Visual Domain 2024 Video Insights
       </p>
 

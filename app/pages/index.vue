@@ -32,48 +32,6 @@ const tours = [
     },
 ];
 
-
-const articles = ref<any[]>([])
-const trips = ref<any[]>([])
-
-const getArticle = async ()=>{
-    try{
-        const res = await axios.get(config.public.URL_API+"/article",{
-            params:{
-                page:1,
-                limit:4
-            }
-        })
-        articles.value = res.data.data
-        console.log(res.data)
-    }catch(error){
-        console.log(error)
-    }
-}
-
-const getTrip = async ()=>{
-    try{
-        const res = await axios.get(config.public.URL_API+"/trip",{
-            params:{
-                page:1,
-                limit:3
-            }
-        })
-        trips.value = res.data.data
-        console.log(trips.value)
-    }catch(error){
-        console.log(error)
-    }
-}
-
-onMounted(() => {
-    getArticle()
-    getTrip()
-    console.log(trips.value)
-    
-    console.log('mounted')
-})
-
 </script>
 <template>
     <HeroHome />

@@ -7,7 +7,7 @@ const { title, date, description, image } = defineProps([
 ])
 </script>
 <template>
-     <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+     <div class="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-lg transition duration-300">
                     <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80"
                         alt="Gunung Semeru" class="w-full h-56 object-cover" />
                     <div class="p-6 text-left">

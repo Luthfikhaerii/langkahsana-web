@@ -1,11 +1,36 @@
 <script setup>
-// Tidak perlu logic tambahan, semua konten statis
+const getArticle = async () => {
+    try {
+        const res = await axios.get(config.public.URL_API + "/article", {
+            params: {
+                page: 1,
+                limit: 4
+            }
+        })
+        articles.value = res.data.data
+        console.log(res.data)
+    } catch (error) {
+        console.log(error)
+    }
+}
 </script>
 <template>
-    <section class="bg-[#FAFAFA] py-20 px-8 lg:px-16 md:px-12">
+    <section class="bg-[#FAFAFA] pt-8 pb-16 px-16">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl font-bold mb-10">ARTICLE</h2>
-
+            <div class="flex justify-between items-center mb-8 w-full">
+                <h2 class="text-2xl font-bold text-black mr-4">
+                    ARTICLE
+                </h2>
+                    <div class="flex-1 h-px bg-gray-300"></div>
+                <button class="text-langkahsana hover:text-gray-700 transition-colors duration-200 flex items-center gap-2 ml-4">
+                    <span class="font-medium text-langkahsana">View All</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="langkahsana">
+                        <path fill-rule="evenodd"
+                            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </button>
+            </div>
             <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
                 <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
                     <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80"
@@ -19,7 +44,8 @@
                             Tips Mendaki Gunung untuk Pemula
                         </h3>
                         <div class="flex items-center text-xs text-gray-600 mb-2">
-                            <Icon name="mdi:calendar-month-outline" size="16" /> <span class="ml-2">25 Oktober 2025</span>
+                            <Icon name="mdi:calendar-month-outline" size="16" /> <span class="ml-2">25 Oktober
+                                2025</span>
                         </div>
                         <p class="mb-4 text-sm text-gray-600">
                             Panduan lengkap bagi kamu yang baru memulai hobi hiking. Dari
@@ -41,7 +67,8 @@
                             Pengalaman Mendaki Gunung Semeru
                         </h3>
                         <div class="flex items-center text-xs text-gray-600 mb-2">
-                            <Icon name="mdi:calendar-month-outline" size="16" /> <span class="ml-2">20 Oktober 2025</span>
+                            <Icon name="mdi:calendar-month-outline" size="16" /> <span class="ml-2">20 Oktober
+                                2025</span>
                         </div>
                         <p class="mb-4 text-sm text-gray-600">
                             Catatan perjalanan mendaki Mahameru, atap Pulau Jawa yang menawan
@@ -63,13 +90,14 @@
                             Perlengkapan Wajib untuk Hiking
                         </h3>
                         <div class="flex items-center text-xs text-gray-600 mb-2">
-                            <Icon name="mdi:calendar-month-outline" size="16" /> <span class="ml-2">15 Oktober 2025</span>
+                            <Icon name="mdi:calendar-month-outline" size="16" /> <span class="ml-2">15 Oktober
+                                2025</span>
                         </div>
                         <p class="mb-4 text-sm text-gray-600">
                             Daftar lengkap perlengkapan yang harus kamu bawa saat mendaki
                             gunung agar perjalanan lebih aman dan nyaman.
                         </p>
-                        
+
                     </div>
                 </div>
             </div>

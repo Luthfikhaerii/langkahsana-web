@@ -2,7 +2,7 @@
 // Tidak perlu script tambahan
 </script>
 <template>
-  <section class="w-full bg-[#FAFAFA] pb-14">
+  <section class="w-full bg-[#FAFAFA] px-8 py-8">
     <!-- Gambar hero -->
     <div class="w-full h-[350px] md:h-[450px] overflow-hidden bg-[#FAFAFA]">
       <img

@@ -1,4 +1,7 @@
 <script setup>
+import { useRouter } from 'vue-router';
+const router = useRouter()
+
 const trips = [
   {
     id: 1,
@@ -43,32 +46,55 @@ const trips = [
       "Pendakian santai dengan pemandangan sunrise spektakuler dan bukit-bukit teletubbies yang ikonik.",
   },
 ];
+
+const getTrip = async () => {
+  try {
+    const res = await axios.get(config.public.URL_API + "/trip", {
+      params: {
+        page: 1,
+        limit: 3
+      }
+    })
+    trips.value = res.data.data
+    console.log(trips.value)
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+const onClickTrip = () => {
+  alert("sfdsf")
+}
 </script>
 <template>
-  <section class="bg-[#FAFAFA] py-16 px-8 lg:px-16 relative z-10">
+  <section class="bg-[#FAFAFA] pb-8 pt-16 lg:px-16 relative z-10">
     <div class="max-w-7xl mx-auto">
-      <h2 class="text-3xl font-bold mb-10">OUR TRIP</h2>
+      <div class="flex justify-between items-center mb-8 w-full">
+        <h2 class="text-2xl font-bold text-black mr-4">
+          EVENTS
+        </h2>
+        <div class="flex-1 h-px bg-gray-300"></div>
+        <button @onclick="onClickTrip"
+          class="text-langkahsana hover:text-gray-700 transition-colors duration-200 flex items-center gap-2 ml-4">
+          <span class="font-medium text-langkahsana">View All</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="langkahsana">
+            <path fill-rule="evenodd"
+              d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+              clip-rule="evenodd" />
+          </svg>
+        </button>
+      </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div
-          v-for="trip in trips"
-          :key="trip.id"
-          class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition"
-        >
+        <div v-for="trip in trips" :key="trip.id"
+          class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition">
           <div class="relative">
-            <img
-              :src="trip.image"
-              :alt="trip.title"
-              class="h-48 w-full object-cover"
-            />
-            <span
-              class="absolute top-3 right-3 text-xs px-2 py-1 rounded-md text-white"
-              :class="{
-                'bg-red-500': trip.status === 'Sulit',
-                'bg-yellow-500': trip.status === 'Sedang',
-                'bg-green-500': trip.status === 'Mudah',
-              }"
-            >
+            <img :src="trip.image" :alt="trip.title" class="h-48 w-full object-cover" />
+            <span class="absolute top-3 right-3 text-xs px-2 py-1 rounded-md text-white" :class="{
+              'bg-red-500': trip.status === 'Sulit',
+              'bg-yellow-500': trip.status === 'Sedang',
+              'bg-green-500': trip.status === 'Mudah',
+            }">
               {{ trip.status }}
             </span>
           </div>
@@ -98,9 +124,7 @@ const trips = [
 
             <div class="flex justify-between items-center mt-4">
               <span class="font-semibold text-gray-800">{{ trip.price }}</span>
-              <button
-                class="bg-green-700 text-white text-sm px-4 py-2 rounded-md hover:bg-green-800 transition"
-              >
+              <button class="bg-green-700 text-white text-sm px-4 py-2 rounded-md hover:bg-green-800 transition">
                 Daftar
               </button>
             </div>
