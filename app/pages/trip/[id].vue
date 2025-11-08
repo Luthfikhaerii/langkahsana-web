@@ -63,7 +63,7 @@ const parseList = (content) => {
 <template>
   <div class="min-h-screen bg-gray-50">
     <!-- Hero Image -->
-    <div class="relative h-96 w-full overflow-hidden">
+    <div class="relative h-[40vh] w-full overflow-hidden">
       <img
         :src="trip.image"
         :alt="trip.title"
@@ -153,10 +153,26 @@ const parseList = (content) => {
 
             <div class="p-6">
               <div v-for="content in filteredContents" :key="content.id" class="mb-6 last:mb-0">
-                <div v-if="content.type === 'text'" class="prose max-w-none">
+                <div v-if="content.type === 'description'" class="prose max-w-none">
                   <p class="text-gray-700 leading-relaxed">{{ content.content }}</p>
                 </div>
-                <div v-else-if="content.type === 'list'" class="space-y-2">
+                <div v-else-if="content.type === 'itinerary'" class="space-y-2">
+                  <div v-for="(item, index) in parseList(content.content)" :key="index" class="flex items-start gap-3">
+                    <svg class="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                    </svg>
+                    <span class="text-gray-700">{{ item }}</span>
+                  </div>
+                </div>
+                <div v-else-if="content.type === 'include'" class="space-y-2">
+                  <div v-for="(item, index) in parseList(content.content)" :key="index" class="flex items-start gap-3">
+                    <svg class="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                    </svg>
+                    <span class="text-gray-700">{{ item }}</span>
+                  </div>
+                </div>
+                <div v-else-if="content.type === 'exclude'" class="space-y-2">
                   <div v-for="(item, index) in parseList(content.content)" :key="index" class="flex items-start gap-3">
                     <svg class="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                       <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />

@@ -15,15 +15,14 @@ const { title, date, description, image } = defineProps([
                             class="inline-block bg-[#EAF3EE] text-[#1E584C] text-sm font-semibold px-3 py-1 rounded-full mb-3">
                             Trip Report
                         </span>
-                        <h3 class="text-lg font-semibold mb-2">
-                            Pengalaman Mendaki Gunung Semeru
-                        </h3>
+                        <h3 class="text-lg font-semibold mb-2 line-clamp-2">
+                            Pengalaman Mendaki Gunung Semeru lalu melihat hantu yang
+                        </h3> 
                         <div class="flex items-center text-xs text-gray-600 mb-2">
                             <Icon name="mdi:calendar-month-outline" size="16" /> <span class="ml-2">20 Oktober 2025</span>
                         </div>
-                        <p class="mb-4 text-sm text-gray-600">
-                            Catatan perjalanan mendaki Mahameru, atap Pulau Jawa yang menawan
-                            dengan segala tantangan dan keindahannya.
+                        <p class="mb-2 text-sm text-gray-600 line-clamp-2 h-10">
+                            Catatan perjalanan mendaki Mahameru,  Catatan perjalanan mendaki Mahameru, 
                         </p>
                     </div>
                 </div>
