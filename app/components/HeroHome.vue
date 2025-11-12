@@ -9,7 +9,7 @@ onMounted(() => window.addEventListener('scroll', handleScroll))
 onUnmounted(() => window.removeEventListener('scroll', handleScroll))
 </script>
 <template>
-  <section class="relative bg-cover bg-center h-[100vh] flex flex-col items-center justify-center text-white z-10">
+  <section class="relative bg-cover bg-center h-[90vh] flex flex-col items-center justify-center text-white z-10">
     <div class="absolute inset-0 bg-cover bg-center bg-[url('/images/hero2.jpg')] "
       :style="{ transform: `translateY(${scrollY * 0.5}px)` }"></div>
     <!-- Overlay -->
@@ -26,7 +26,6 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
 
     </div>
     <div class="w-full pb-4 mx-w-6 px-8">
-      <hr class="w-full relative" />
       <div class="flex justify-between w-full items-center relative">
         <p>
           Bandung, Indonesia

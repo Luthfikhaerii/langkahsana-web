@@ -71,7 +71,7 @@ const parseList = (content) => {
       />
       <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
       <div class="absolute bottom-0 left-0 right-0 p-8">
-        <div class="max-w-6xl mx-auto">
+        <div class="max-w-6xl mx-auto px-4 md:px-8">
           <h1 class="text-4xl md:text-5xl font-bold text-white mb-2">
             {{ trip.title }}
           </h1>

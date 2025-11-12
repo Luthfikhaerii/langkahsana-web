@@ -16,7 +16,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
     <!-- Overlay -->
     <div class="absolute inset-0 bg-black/40"></div>
     <div class="absolute bottom-0 left-0 right-0 p-8">
-      <div class="max-w-6xl mx-auto">
+      <div class="max-w-6xl mx-auto px-4 md:px-8">
         <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-2">
           {{ title }}
         </h1>

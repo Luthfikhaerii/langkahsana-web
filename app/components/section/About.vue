@@ -2,9 +2,9 @@
 // Tidak perlu script tambahan
 </script>
 <template>
-  <section class="w-full bg-[#FAFAFA] px-8 py-8">
+  <section class="w-full bg-[#FAFAFA]  relative z-10">
     <!-- Gambar hero -->
-    <div class="w-full h-[350px] md:h-[450px] overflow-hidden bg-[#FAFAFA]">
+    <div class="w-full h-[350px] md:h-[450px] overflow-hidden bg-[#FAFAFA] max-w-6xl mx-auto px-4 md:px-8">
       <img
         src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80"
         alt="Hero Image"

@@ -43,8 +43,8 @@ const onSearchHandler = (e: any) => {
 </script>
 <template>
     <HeroCustom title="EVENT & TRIP" desc="Exploring Indonesia is an unforgettable adventure."/>
-    <section class="py-8 px-16 relative bg-[#FAFAFA] z-30 ">
-        <div class="mx-auto max-w-6xl">
+    <section class="py-8 relative bg-[#FAFAFA] z-30 ">
+        <div class="mx-auto max-w-6xl px-4 md:py-8">
             <div
                 class="w-full mb-8 flex flex-col sm:flex-row justify-between items-end  sm:items-end gap-8 max-w-screen-xl mx-auto">
                 <!-- Search Bar -->
