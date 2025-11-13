@@ -35,9 +35,9 @@ const tours = [
 </script>
 <template>
     <HeroHome />
-    <SectionSlider/>
-    <SectionTrip/>
-    <SectionAbout/>
-    <SectionTagline/>
-    <SectionArticle/>
+    <SectionSlider />
+    <SectionTrip />
+    <SectionTagline />
+    <SectionAbout />
+    <SectionArticle />
 </template>

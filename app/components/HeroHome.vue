@@ -1,5 +1,5 @@
 <template>
-  <div class="relative w-full h-screen overflow-hidden">
+  <div class="relative w-full h-screen overflow-hidden mb-16">
     <!-- Background Image -->
     <div 
       class="absolute inset-0 bg-cover bg-center"
@@ -73,8 +73,7 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
             </svg>
             <div>
-              <p class="font-semibold">The Location Name</p>
-              <p class="text-sm opacity-90">Country</p>
+              <p class="font-semibold">Puncak Sangar</p>
             </div>
           </div>
         </div>

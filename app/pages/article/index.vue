@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import axios from 'axios';
 import { VueAwesomePaginate } from 'vue-awesome-paginate';
+import ArticleDisplay from '~/components/card/ArticleDisplay.vue';
+import NewsDisplay from '~/components/card/ArticleDisplay.vue';
 
 const env = useRuntimeConfig()
 const search = ref('')
@@ -50,9 +52,26 @@ const onSearchHandler = (e: any) => {
 
 </script>
 <template>
-    <HeroCustom title="ARTIKEL" desc="Exploring Indonesia is an unforgettable adventure."/>
-    <section class="py-8 relative bg-[#FAFAFA] z-30">
+    <section class="max-w-6xl px-4 md:px-8 mx-auto pt-24">
+            <div class="pb-8">
+            <h2 class="text-2xl font-bold text-black mr-4">
+                News Article
+            </h2>
+            <p>Catatan perjalanan dan tips trik</p>
+        </div>
+        <ArticleDisplay image="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+            title="Thousands flee hotels on Rhodes as fires spread"
+            description="Greece's deputy fire chief says the island's fires are the most difficult his service is now facing."
+            category="Europe" />
+    </section>
+
+    <section class="pt-8 relative bg-[#FAFAFA] z-30 pb-16">
         <div class="mx-auto max-w-6xl px-4 md:px-8">
+            <div>
+                <h2 class="text-2xl font-bold text-black mr-4">
+                    All Articles
+                </h2>
+            </div>
             <div
                 class="w-full mb-8 flex flex-col sm:flex-row justify-between items-end  sm:items-end gap-8 max-w-screen-xl mx-auto">
                 <!-- Search Bar -->
@@ -91,7 +110,11 @@ const onSearchHandler = (e: any) => {
                 :description="value.description" :date="new Date(value.date)" :image="value.image" /> -->
             </div>
         </div>
+        <div class="mt-8 w-full flex justify-center">
+                <Pagination />
+            </div>
     </section>
+    
 </template>
 
 <style>

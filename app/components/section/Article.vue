@@ -15,11 +15,11 @@
 // }
 </script>
 <template>
-    <section class="bg-[#FAFAFA] pb-16 px-16">
+    <section class="bg-[#FAFAFA] pb-16">
         <div class="max-w-6xl mx-auto px-4 md:px-8">
             <div class="flex justify-between items-center mb-8 w-full">
                 <h2 class="text-2xl font-bold text-black mr-4">
-                    ARTICLE
+                    Articles
                 </h2>
                     <div class="flex-1 h-px bg-gray-200"></div>
                 <button class="text-langkahsana hover:text-gray-700 transition-colors duration-200 flex items-center gap-2 ml-4">

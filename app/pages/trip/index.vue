@@ -42,11 +42,17 @@ const onSearchHandler = (e: any) => {
 
 </script>
 <template>
-    <div class="pt-16">
-        <SectionSlider/>
+    <div class="pt-24">
+        <SectionSlider />
     </div>
-    <section class="py-8 relative bg-[#FAFAFA] z-30 ">
-        <div class="mx-auto max-w-6xl px-4 md:py-8">
+    <section class="pb-16 relative bg-[#FAFAFA] z-30">
+
+        <div class="mx-auto pt-8 max-w-6xl px-4 md:px-8">
+            <div>
+                <h2 class="text-2xl font-bold text-black mr-4">
+                    All Events
+                </h2>
+            </div>
             <div
                 class="w-full mb-8 flex flex-col sm:flex-row justify-between items-end  sm:items-end gap-8 max-w-screen-xl mx-auto">
                 <!-- Search Bar -->
@@ -83,7 +89,7 @@ const onSearchHandler = (e: any) => {
                 <CardTrip />
                 <CardTrip />
             </div>
-            <div class="mt-16 w-full flex justify-center">
+            <div class="mt-8 w-full flex justify-center">
                 <Pagination />
             </div>
         </div>
