@@ -42,7 +42,9 @@ const onSearchHandler = (e: any) => {
 
 </script>
 <template>
-    <HeroCustom title="EVENT & TRIP" desc="Exploring Indonesia is an unforgettable adventure."/>
+    <div class="pt-16">
+        <SectionSlider/>
+    </div>
     <section class="py-8 relative bg-[#FAFAFA] z-30 ">
         <div class="mx-auto max-w-6xl px-4 md:py-8">
             <div

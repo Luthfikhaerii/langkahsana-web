@@ -1,41 +1,101 @@
-<script setup lang="ts">
-const scrollY = ref(0)
-
-function handleScroll() {
-  scrollY.value = window.scrollY
-}
-
-onMounted(() => window.addEventListener('scroll', handleScroll))
-onUnmounted(() => window.removeEventListener('scroll', handleScroll))
-</script>
 <template>
-  <section class="relative bg-cover bg-center h-[90vh] flex flex-col items-center justify-center text-white z-10">
-    <div class="absolute inset-0 bg-cover bg-center bg-[url('/images/hero2.jpg')] "
-      :style="{ transform: `translateY(${scrollY * 0.5}px)` }"></div>
-    <!-- Overlay -->
-    <div class="absolute inset-0 bg-black/40"></div>
-
-    <!-- Content -->
-    <div class="relative z-10 text-center flex justify-center items-center w-full px-4 h-full"
-      :style="{ transform: `translateY(${scrollY * 0.3}px)` }">
-
-      <h1 class="text-8xl font-extrabold text-center leading-[0.9] max-w-4xl diss">
-        "DARI LANGKAH" JADI CERITA
-        <br />
-      </h1>
-
+  <div class="relative w-full h-screen overflow-hidden">
+    <!-- Background Image -->
+    <div 
+      class="absolute inset-0 bg-cover bg-center"
+      style="background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80')"
+    >
+      <!-- Overlay -->
+      <div class="absolute inset-0 bg-black bg-opacity-30"></div>
     </div>
-    <div class="w-full pb-4 mx-w-6 px-8">
-      <div class="flex justify-between w-full items-center relative">
-        <p>
-          Bandung, Indonesia
-        </p>
-        <p class=" text-sm text-end text-gray-200">
-          Exploring Indonesia is an unforgettable adventure.
-        </p>
+
+    <!-- Content Container -->
+     <div class="flex relative items-center jutify-between h-full w-full">
+    <div class="relative z-10 h-full flex items-center max-w-6xl mx-auto w-full">
+      <div class="container mx-auto px-6 md:px-8 lg:px-8">
+        <div class="max-w-3xl">
+          <!-- Location Badge -->
+          <div class="flex items-center gap-2 mb-6">
+            <span class="text-white text-sm font-light tracking-wide">
+              Bandung, Indonesia
+            </span>
+          </div>
+
+          <!-- Main Heading -->
+          <h1 class="text-white text-5xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+            The Journey Beyond<br />Your Imaginary
+          </h1>
+
+          <!-- Subtitle -->
+          <p class="text-white text-lg md:text-xl mb-8 font-light max-w-xl">
+            Discover thousands of beautiful places around the world with wonderful experiences you can imagine.
+          </p>
+
+          <!-- CTA Button -->
+          <button class="bg-white text-gray-900 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors duration-300">
+            Explore Now
+          </button>
+        </div>
+      </div>
+          <!-- Destination Cards -->
+    <div class="relative right-6 flex gap-4 z-20">
+      <!-- Card 1 -->
+      <div class="relative w-48 h-56 rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300">
+        <img 
+          src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=400&q=80" 
+          alt="Destination" 
+          class="w-full h-full object-cover"
+        />
+        <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent">
+          <div class="flex items-start gap-2 text-white">
+            <svg class="w-4 h-4 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+            <div>
+              <p class="font-semibold">Gunung Padang</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="relative w-48 h-56 rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300">
+        <img 
+          src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&q=80" 
+          alt="Destination" 
+          class="w-full h-full object-cover"
+        />
+        <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent">
+          <div class="flex items-start gap-2 text-white">
+            <svg class="w-4 h-4 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+            <div>
+              <p class="font-semibold">The Location Name</p>
+              <p class="text-sm opacity-90">Country</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </section>
+    </div>
+
+
+    </div>
+  </div>
 </template>
-<style lang="css" scoped>
+
+<script setup>
+// Jika Anda ingin menambahkan data dinamis atau logic, tambahkan di sini
+// Contoh:
+// const destinations = ref([
+//   { id: 1, name: 'The Location Name', country: 'Country', image: '...' },
+//   { id: 2, name: 'The Location Name', country: 'Country', image: '...' }
+// ])
+</script>
+
+<style scoped>
+/* Custom styles jika diperlukan */
 </style>
