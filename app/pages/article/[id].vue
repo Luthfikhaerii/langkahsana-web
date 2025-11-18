@@ -34,8 +34,7 @@ const formatDate = (dateString) => {
 }
 </script>
 <template>
-    <HeroCustom title="READ ARTIKEL" desc="Exploring Indonesia is an unforgettable adventure."/>
-  <div class="min-h-screen bg-white relative z-10">
+  <div class="min-h-screen bg-white relative z-10 pt-16">
     <!-- Article Header -->
     <article class="max-w-4xl mx-auto px-4 py-8 md:py-12">
       <!-- Category & Date -->

@@ -5,62 +5,108 @@ const router = useRouter()
 const trips = [
   {
     id: 1,
-    title: "Gunung Semeru",
-    location: "Jawa Timur",
-    date: "15–17 November 2025",
-    duration: "3 Hari 2 Malam",
-    participants: "12/20 peserta",
-    price: "Rp 1.200.000",
-    status: "Sulit",
+    title: "Sunrise Hike Gunung Putri",
+    location: "Lembang, Bandung",
+    date: "12 Januari 2026",
+    meet_point: "Alun-Alun Bandung",
+    duration: "04.30–10.30",
+    kuota: "30 peserta",
+    price: "Rp 35.000",
+    status: "Mudah",
     image:
       "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=60",
     description:
-      "Pendakian ke Mahameru, puncak tertinggi di Pulau Jawa dengan pemandangan kawah Jonggring Saloko yang memukau.",
+      "Pendakian singkat menikmati sunrise lembut Gunung Putri dan panorama Lembang dari puncak.",
+    content: [
+      {
+        type: "IMAGE",
+        value:
+          "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=900&q=60"
+      },
+      {
+        type: "TEXT",
+        value:
+          "Gunung Putri terkenal sebagai spot sunrise terbaik di Lembang dengan jalur yang ramah pemula."
+      }
+    ],
+    include: ["Tiket masuk", "Parkir", "Snack pagi", "Air mineral", "P3K"],
+    exclude: ["Jas hujan", "Sarung tangan", "Kopi"]
   },
   {
     id: 2,
-    title: "Gunung Rinjani",
-    location: "Lombok, NTB",
-    date: "22–25 November 2025",
-    duration: "4 Hari 3 Malam",
-    participants: "8/15 peserta",
-    price: "Rp 1.500.000",
-    status: "Sulit",
+    title: "One Day Trip Tebing Keraton",
+    location: "Ciburial, Bandung",
+    date: "18 Januari 2026",
+    meet_point: "Gedung Sate Bandung",
+    duration: "05.00–11.00",
+    kuota: "35 peserta",
+    price: "Rp 65.000",
+    status: "Mudah",
     image:
-      "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=900&q=60",
+      "https://images.unsplash.com/photo-1482192596544-9eb780fc7f66?auto=format&fit=crop&w=900&q=60",
     description:
-      "Jelajahi keindahan Danau Segara Anak dan nikmati sunrise dari puncak gunung tertinggi kedua di Indonesia.",
+      "Menikmati hamparan hutan pinus dari ketinggian Tebing Keraton, cocok untuk foto dan healing.",
+    content: [
+      {
+        type: "IMAGE",
+        value:
+          "https://images.unsplash.com/photo-1500048993959-d85f468bb05f?auto=format&fit=crop&w=900&q=60"
+      },
+      {
+        type: "TEXT",
+        value:
+          "Tebing Keraton menawarkan pemandangan lautan kabut dan hutan pinus yang sangat fotogenik."
+      }
+    ],
+    include: ["Tiket masuk", "Transport lokal", "Snack", "Guide", "P3K"],
+    exclude: ["Kopi", "Makanan tambahan", "Payung"]
   },
   {
     id: 3,
-    title: "Gunung Prau",
-    location: "Jawa Tengah",
-    date: "5–6 Desember 2025",
-    duration: "2 Hari 1 Malam",
-    participants: "15/25 peserta",
-    price: "Rp 450.000",
+    title: "Exploration Trip Gunung Batu",
+    location: "Lembang, Bandung",
+    date: "25 Januari 2026",
+    meet_point: "Cihampelas Walk",
+    duration: "06.00–14.00",
+    kuota: "28 peserta",
+    price: "Rp 50.000",
     status: "Mudah",
     image:
-      "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=900&q=60",
+      "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=900&q=60",
     description:
-      "Pendakian santai dengan pemandangan sunrise spektakuler dan bukit-bukit teletubbies yang ikonik.",
+      "Pendakian singkat ke Gunung Batu dengan jalur berbatu dan panorama Lembang yang luas.",
+    content: [
+      {
+        type: "IMAGE",
+        value:
+          "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=900&q=60"
+      },
+      {
+        type: "TEXT",
+        value:
+          "Gunung Batu menyuguhkan jalur batuan besar dan view 360° area Lembang dari puncaknya."
+      }
+    ],
+    include: ["Tiket masuk", "Air mineral", "Snack", "Parkir", "P3K"],
+    exclude: ["Jas hujan", "Obat pribadi", "Topi"]
   },
 ];
 
-const getTrip = async () => {
-  try {
-    const res = await axios.get(config.public.URL_API + "/trip", {
-      params: {
-        page: 1,
-        limit: 3
-      }
-    })
-    trips.value = res.data.data
-    console.log(trips.value)
-  } catch (error) {
-    console.log(error)
-  }
-}
+
+// const getTrip = async () => {
+//   try {
+//     const res = await axios.get(config.public.URL_API + "/trip", {
+//       params: {
+//         page: 1,
+//         limit: 3
+//       }
+//     })
+//     trips.value = res.data.data
+//     console.log(trips.value)
+//   } catch (error) {
+//     console.log(error)
+//   }
+// }
 
 const onClickTrip = () => {
   alert("sfdsf")
@@ -87,16 +133,9 @@ const onClickTrip = () => {
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div v-for="trip in trips" :key="trip.id"
-          class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition">
+          class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition">
           <div class="relative">
             <img :src="trip.image" :alt="trip.title" class="h-48 w-full object-cover" />
-            <span class="absolute top-3 right-3 text-xs px-2 py-1 rounded-md text-white" :class="{
-              'bg-red-500': trip.status === 'Sulit',
-              'bg-yellow-500': trip.status === 'Sedang',
-              'bg-green-500': trip.status === 'Mudah',
-            }">
-              {{ trip.status }}
-            </span>
           </div>
 
           <div class="p-5 flex flex-col justify-between h-[320px]">
@@ -113,7 +152,7 @@ const onClickTrip = () => {
                   <Icon name="mdi:clock-outline" size="16" /> {{ trip.duration }}
                 </li>
                 <li class="flex items-center gap-2">
-                  <Icon name="mdi:account-group-outline" size="16" /> {{ trip.participants }}
+                  <Icon name="mdi:account-group-outline" size="16" /> {{ trip.kuota }}
                 </li>
               </ul>
 
@@ -125,7 +164,7 @@ const onClickTrip = () => {
             <div class="flex justify-between items-center mt-4">
               <span class="font-semibold text-gray-800">{{ trip.price }}</span>
               <button class="bg-green-700 text-white text-sm px-4 py-2 rounded-md hover:bg-green-800 transition">
-                Daftar
+                Detail
               </button>
             </div>
           </div>

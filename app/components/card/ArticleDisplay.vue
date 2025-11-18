@@ -1,5 +1,5 @@
 <script setup lang="ts">
-defineProps({
+const { image, title, description, category } = defineProps({
     image: String,
     title: String,
     description: String,

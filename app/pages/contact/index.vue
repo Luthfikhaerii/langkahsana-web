@@ -28,9 +28,8 @@ const handleSubmit = () => {
 /* Additional custom styles if needed */
 </style>
 <template>
-    <HeroCustom title="CONTACT" desc="Exploring Indonesia is an unforgettable adventure." />
-    <section class="bg-white py-8 px-16 relative z-20">
-    <div class="max-w-7xl mx-auto">
+    <section class="bg-gray-50 relative z-20 pt-24 pb-16">
+    <div class="max-w-6xl mx-auto md:px-8 px-4">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
         <!-- Left Side - Text Content -->
         <div class="space-y-6">
@@ -46,7 +45,7 @@ const handleSubmit = () => {
         </div>
 
         <!-- Right Side - Contact Form -->
-        <div class="bg-white">
+        <div>
           <form @submit.prevent="handleSubmit" class="space-y-6">
             <!-- Name Field -->
             <div>

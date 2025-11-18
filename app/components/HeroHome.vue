@@ -3,10 +3,10 @@
     <!-- Background Image -->
     <div 
       class="absolute inset-0 bg-cover bg-center"
-      style="background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80')"
+      style="background-image: url('/images/gunung1.jpg')"
     >
       <!-- Overlay -->
-      <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+      <div class="absolute inset-0 bg-black bg-opacity-60"></div>
     </div>
 
     <!-- Content Container -->
@@ -15,19 +15,19 @@
       <div class="container mx-auto px-6 md:px-8 lg:px-8">
         <div class="max-w-3xl">
           <!-- Location Badge -->
-          <div class="flex items-center gap-2 mb-6">
+          <div class="flex items-center gap-2 mb-2">
             <span class="text-white text-sm font-light tracking-wide">
               Bandung, Indonesia
             </span>
           </div>
 
           <!-- Main Heading -->
-          <h1 class="text-white text-5xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-            The Journey Beyond<br />Your Imaginary
+          <h1 class="text-white text-5xl md:text-5xl lg:text-7xl font-extrabold leading-tight mb-4">
+            Dari Langkah<br />Jadi Cerita
           </h1>
 
           <!-- Subtitle -->
-          <p class="text-white text-lg md:text-xl mb-8 font-light max-w-xl">
+          <p class="text-white text-lg md:text-xl mb-6 font-light max-w-xl">
             Discover thousands of beautiful places around the world with wonderful experiences you can imagine.
           </p>
 
@@ -40,7 +40,7 @@
           <!-- Destination Cards -->
     <div class="relative right-6 flex gap-4 z-20">
       <!-- Card 1 -->
-      <div class="relative w-48 h-56 rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300">
+      <div class="relative w-48 h-56 rounded-md overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300">
         <img 
           src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=400&q=80" 
           alt="Destination" 
@@ -60,7 +60,7 @@
       </div>
 
       <!-- Card 2 -->
-      <div class="relative w-48 h-56 rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300">
+      <div class="relative w-48 h-56 rounded-md overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300">
         <img 
           src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&q=80" 
           alt="Destination" 

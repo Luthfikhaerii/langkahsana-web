@@ -21,7 +21,7 @@
       <img
         src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80"
         alt="Hero Image"
-        class="w-full h-full object-cover"
+        class="w-full h-full object-cover rounded-lg"
       />
     </div>
   </section>

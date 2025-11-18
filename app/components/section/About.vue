@@ -49,7 +49,7 @@ onMounted(() => {
           <!-- Grid Layout Gambar -->
           <div class="grid grid-cols-2 gap-4">
             <!-- Gambar Besar -->
-            <div class="col-span-2 relative overflow-hidden rounded-xl shadow-xl" data-aos="zoom-in">
+            <div class="col-span-2 relative overflow-hidden rounded-lg shadow-xl" data-aos="zoom-in">
               <img
                 src="/images/gunung1.jpg"
                 alt="Mountain Peak"
@@ -57,7 +57,7 @@ onMounted(() => {
               />
             </div>
             <!-- Gambar Kecil 1 -->
-            <div class="relative overflow-hidden rounded-xl shadow-lg" data-aos="zoom-in" data-aos-delay="150">
+            <div class="relative overflow-hidden rounded-lg shadow-lg" data-aos="zoom-in" data-aos-delay="150">
               <img
                 src="/images/hero1.jpg"
                 alt="Forest Trail"
@@ -69,7 +69,7 @@ onMounted(() => {
             </div>
 
             <!-- Gambar Kecil 2 -->
-            <div class="relative overflow-hidden rounded-2xl shadow-lg" data-aos="zoom-in" data-aos-delay="300">
+            <div class="relative overflow-hidden rounded-lg shadow-lg" data-aos="zoom-in" data-aos-delay="300">
               <img
                 src="/images/gunung2.webp"
                 alt="Lakeside Camp"
