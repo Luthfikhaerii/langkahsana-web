@@ -12,7 +12,7 @@ const trips = [
         duration: "04.30–10.30",
         kuota: "30 peserta",
         price: "Rp 150.000",
-        status: "Mudah",
+        status: true,
         image:
             "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=60",
         description:
@@ -41,7 +41,7 @@ const trips = [
         duration: "05.00–11.00",
         kuota: "35 peserta",
         price: "Rp 175.000",
-        status: "Mudah",
+        status: false,
         image:
             "https://images.unsplash.com/photo-1482192596544-9eb780fc7f66?auto=format&fit=crop&w=900&q=60",
         description:
@@ -70,7 +70,7 @@ const trips = [
         duration: "06.00–14.00",
         kuota: "28 peserta",
         price: "Rp 160.000",
-        status: "Mudah",
+        status: false,
         image:
             "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=900&q=60",
         description:
@@ -99,7 +99,7 @@ const trips = [
         duration: "05.30–13.00",
         kuota: "35 peserta",
         price: "Rp 170.000",
-        status: "Mudah",
+        status: false,
         image:
             "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=60",
         description:
@@ -128,7 +128,7 @@ const trips = [
         duration: "06.00–15.00",
         kuota: "35 peserta",
         price: "Rp 190.000",
-        status: "Menengah",
+        status: false,
         image:
             "https://img.freepik.com/free-photo/mount-batur_1385-1771.jpg?semt=ais_hybrid&w=740&q=80",
         description:
@@ -157,7 +157,7 @@ const trips = [
         duration: "12.00–19.00",
         kuota: "25 peserta",
         price: "Rp 160.000",
-        status: "Mudah",
+        status: false,
         image:
             "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=900&q=60",
         description:
@@ -186,7 +186,7 @@ const trips = [
         duration: "07.00–15.30",
         kuota: "35 peserta",
         price: "Rp 180.000",
-        status: "Mudah",
+        status: false,
         image:
             "https://awsimages.detik.net.id/community/media/visual/2022/12/10/gunung-semeru-erupsi_11.jpeg?w=600&q=90",
         description:
@@ -215,7 +215,7 @@ const trips = [
         duration: "06.00–13.00",
         kuota: "30 peserta",
         price: "Rp 155.000",
-        status: "Mudah",
+        status: false,
         image:
             "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=900&q=60",
         description:
@@ -244,7 +244,7 @@ const trips = [
         duration: "07.00–16.00",
         kuota: "peserta",
         price: "Rp 200.000",
-        status: "Menengah",
+        status: false,
         image:
             "https://pict.sindonews.net/dyn/850/pena/news/2024/09/17/156/1456851/10-gunung-terindah-di-indonesia-untuk-mendaki-nomor-2-punya-padang-edelweis-fso.jpg",
         description:
@@ -314,11 +314,9 @@ const onSearchHandler = (e: any) => {
     <section class="pb-16 relative bg-[#FAFAFA] z-30">
 
         <div class="mx-auto pt-8 max-w-6xl px-4 md:px-8">
-            <div>
-                <h2 class="text-2xl font-bold text-black mr-4">
+                <h2 class="text-3xl font-bold text-black mr-4">
                     All Events & Trip
                 </h2>
-            </div>
             <div
                 class="w-full mb-8 flex flex-col sm:flex-row justify-between items-end  sm:items-end gap-8 max-w-screen-xl mx-auto">
                 <!-- Search Bar -->
@@ -334,13 +332,10 @@ const onSearchHandler = (e: any) => {
                         class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-xl shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all" />
                 </div>
 
-                <!-- Sort Dropdown -->
+                 <!-- Sort -->
                 <div class="w-full sm:w-48">
-                    <label for="sort" class="block mb-2 text-sm font-medium text-gray-700">
-                        Sort by
-                    </label>
-                    <select id="sort" v-model="sort"
-                        class="w-full px-4 py-2 border border-gray-300 rounded-xl shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm transition-all">
+                    <label class="block mb-2 text-sm font-medium text-gray-700">Sort by</label>
+                    <select v-model="sort" class="w-full px-4 py-2 border rounded-xl shadow-sm">
                         <option value="newest">Newest</option>
                         <option value="oldest">Oldest</option>
                     </select>

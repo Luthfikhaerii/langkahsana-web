@@ -113,10 +113,10 @@ const onClickTrip = () => {
 }
 </script>
 <template>
-  <section class="bg-[#FAFAFA] pb-16 pt-16 relative z-10">
+  <section class="bg-[#FAFAFA] pb-16 pt-8 relative z-10">
     <div class="max-w-6xl px-4 md:px-8 mx-auto">
       <div class="flex justify-between items-center mb-8 w-full">
-        <h2 class="text-2xl font-bold text-black mr-4">
+        <h2 class="text-3xl font-bold text-black mr-4">
           Events
         </h2>
         <div class="flex-1 h-px bg-gray-200"></div>

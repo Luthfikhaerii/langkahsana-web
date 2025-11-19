@@ -11,7 +11,7 @@ const { id, title, date, description, image, category } = defineProps([
 <template>
     <div :onclick="() => useRouter().push('/article/' + id)"
         class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-lg transition duration-300">
-        <img :src="category" :alt="image" class="w-full h-56 object-cover" />
+        <img :src="image" :alt="title" class="w-full h-56 object-cover" />
         <div class="p-4 text-left">
             <span class="inline-block bg-[#EAF3EE] text-[#1E584C] text-xs font-semibold px-2 py-0.5 rounded-full mb-2">
                 {{ category }}

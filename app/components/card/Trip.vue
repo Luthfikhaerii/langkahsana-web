@@ -11,7 +11,6 @@ const { title, date, status, price, image,location,duration,kuota,description } 
   'description'
 ])
 
-
 </script>
 <template>
   <div class="bg-white rounded-md shadow-sm overflow-hidden hover:shadow-md transition">
@@ -44,9 +43,12 @@ const { title, date, status, price, image,location,duration,kuota,description } 
 
       <div class="flex justify-between items-center mt-4">
         <span class="font-semibold text-gray-800">{{ price }}</span>
-        <button class="bg-green-700 text-white text-sm px-4 py-2 rounded-md hover:bg-green-800 transition">
+        <button v-if="status==true" class="bg-green-700 text-white text-sm px-4 py-2 rounded-md hover:bg-green-800 transition">
           Detail
         </button>
+        <p v-else class="text-sm px-4 py-2 rounded-md transition">
+          Closed
+        </p>
       </div>
     </div>
   </div>
