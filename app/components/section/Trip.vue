@@ -113,13 +113,15 @@ const onClickTrip = () => {
 }
 </script>
 <template>
-  <section class="bg-[#FAFAFA] pb-16 pt-8 relative z-10">
+  <section class="bg-[#FAFAFA] pb-32 pt-16 relative z-10">
     <div class="max-w-6xl px-4 md:px-8 mx-auto">
       <div class="flex justify-between items-center mb-8 w-full">
-        <h2 class="text-3xl font-bold text-black mr-4">
-          Events
-        </h2>
-        <div class="flex-1 h-px bg-gray-200"></div>
+        <div>
+          <h2 class="text-3xl font-bold text-black mr-4">
+            Events
+          </h2>
+          <p>Event terdekat yang mungkin anda tertarik</p>
+        </div>
         <button @onclick="onClickTrip"
           class="text-langkahsana hover:text-gray-700 transition-colors duration-200 flex items-center gap-2 ml-4">
           <span class="font-medium text-langkahsana">View All</span>

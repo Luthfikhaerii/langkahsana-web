@@ -311,9 +311,9 @@ const onSearchHandler = (e: any) => {
     <div class="pt-24">
         <SectionSlider />
     </div>
-    <section class="pb-16 relative bg-[#FAFAFA] z-30">
+    <section class="py-16 relative bg-[#FAFAFA] z-30">
 
-        <div class="mx-auto pt-8 max-w-6xl px-4 md:px-8">
+        <div class="mx-auto max-w-6xl px-4 md:px-8">
                 <h2 class="text-3xl font-bold text-black mr-4">
                     All Events & Trip
                 </h2>

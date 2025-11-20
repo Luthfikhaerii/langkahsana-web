@@ -13,13 +13,13 @@ const scrolled = ref(true)
 </script>
 
 <template>
-  <nav :class="['x-10 top-0 min-w-screen h-16 z-50 fixed w-full flex items-center transition duration-200',scrolled? 'bg-white shadow-sm border-b border-gray-200':'bg-transparent']">
+  <nav :class="['x-10 top-0 min-w-screen h-16 z-50 fixed w-full flex items-center transition duration-200',scrolled? 'bg-white shadow-md border-b border-gray-200':'bg-transparent']">
     <div class="max-w-6xl flex flex-wrap items-center justify-between mx-auto py-2 px-8  w-full">
       <!-- Logo -->
       <NuxtLink to="/" class="flex items-center space-x-2">
         <!-- <img src="" class="h-8" alt="Flowbite Logo" /> -->
-        <span :class="['self-center text-2xl font-semibold whitespace-nowrap',scrolled?'text-langkahsana':'text-white']">
-          LANGKAHSANA
+        <span :class="['self-center text-2xl font-bold whitespace-nowrap',scrolled?'text-langkahsana':'text-white']">
+          Langkahsana
         </span>
       </NuxtLink>
 

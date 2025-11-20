@@ -12,7 +12,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <section class="bg-gray-50 pb-16 overflow-hidden">
+  <section class="bg-gray-50 py-32 overflow-hidden">
     <div class="max-w-6xl mx-auto px-6 md:px-8 lg:px-8">
       <!-- Layout Menyamping -->
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">

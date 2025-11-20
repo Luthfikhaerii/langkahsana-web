@@ -189,7 +189,7 @@ const prevId = () => { if (idFilter.value > 1) idFilter.value--; };
     </section>
 
     <!-- LIST ARTICLES -->
-    <section class="pt-8 relative bg-[#FAFAFA] z-30 pb-16">
+    <section class="pt-16 relative bg-[#FAFAFA] z-30 pb-16">
         <div class="mx-auto max-w-6xl px-4 md:px-8">
 
             <h2 class="text-3xl font-bold text-black">All Articles</h2>

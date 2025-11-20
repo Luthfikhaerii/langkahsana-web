@@ -61,11 +61,14 @@ const articles = [
     <section class="bg-[#FAFAFA] pb-16">
         <div class="max-w-6xl mx-auto px-4 md:px-8">
             <div class="flex justify-between items-center mb-8 w-full">
-                <h2 class="text-3xl font-bold text-black mr-4">
-                    Articles
-                </h2>
-                    <div class="flex-1 h-px bg-gray-200"></div>
-                <button class="text-langkahsana hover:text-gray-700 transition-colors duration-200 flex items-center gap-2 ml-4">
+                <div>
+                    <h2 class="text-3xl font-bold text-black mr-4">
+                        Articles
+                    </h2>
+                    <p>Beberapa article terbaru yang mungkin anda suka</p>
+                </div>
+                <button
+                    class="text-langkahsana hover:text-gray-700 transition-colors duration-200 flex items-center gap-2 ml-4">
                     <span class="font-medium text-langkahsana">View All</span>
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="langkahsana">
                         <path fill-rule="evenodd"
@@ -75,7 +78,7 @@ const articles = [
                 </button>
             </div>
             <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-              <CardArticle v-for="value in articles" :key="value.id" :title="value.title"
+                <CardArticle v-for="value in articles" :key="value.id" :title="value.title"
                     :description="value.description" :date="value.date" :image="value.image"
                     :category="value.category" />
             </div>
