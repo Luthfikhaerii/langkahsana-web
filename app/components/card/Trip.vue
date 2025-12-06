@@ -13,9 +13,9 @@ const { title, date, status, price, image,location,duration,kuota,description } 
 
 </script>
 <template>
-  <div class="bg-white rounded-md shadow-sm overflow-hidden hover:shadow-md transition">
+  <div class="bg-white rounded-sm shadow-sm overflow-hidden hover:shadow-md transition">
     <div class="relative">
-      <img :src="image" :alt="title" class="h-48 w-full object-cover" />
+      <img :src="image" :alt="title" class="h-48 w-full object-cover" loading="lazy" />
     </div>
 
     <div class="p-5 flex flex-col justify-between h-[320px]">
@@ -42,7 +42,7 @@ const { title, date, status, price, image,location,duration,kuota,description } 
       </div>
 
       <div class="flex justify-between items-center mt-4">
-        <span class="font-semibold text-gray-800">{{ price }}</span>
+        <span class="font-bold text-langkahsana">{{ price }}</span>
         <button v-if="status==true" class="bg-green-700 text-white text-sm px-4 py-2 rounded-md hover:bg-green-800 transition">
           Detail
         </button>

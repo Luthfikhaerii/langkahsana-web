@@ -7,7 +7,7 @@ const { image, title, description, category } = defineProps({
 })
 </script>
 <template>
-    <div class="relative w-full max-w-6xl h-[250px] rounded-lg overflow-hidden shadow-lg cursor-pointer group">
+    <div class="relative w-full max-w-7xl h-[400px] rounded-sm overflow-hidden shadow-lg cursor-pointer group">
         <!-- Background image -->
         <img :src="image" alt="news image"
             class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" />

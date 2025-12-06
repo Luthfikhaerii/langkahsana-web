@@ -311,12 +311,12 @@ const onSearchHandler = (e: any) => {
     <div class="pt-24">
         <SectionSlider />
     </div>
+    <Slider />
     <section class="py-16 relative bg-[#FAFAFA] z-30">
-
-        <div class="mx-auto max-w-6xl px-4 md:px-8">
-                <h2 class="text-3xl font-bold text-black mr-4">
-                    All Events & Trip
-                </h2>
+        <div class="mx-auto max-w-7xl px-4 md:px-8">
+            <h2 class="text-3xl font-bold text-black mr-4">
+                All Events & Trip
+            </h2>
             <div
                 class="w-full mb-8 flex flex-col sm:flex-row justify-between items-end  sm:items-end gap-8 max-w-screen-xl mx-auto">
                 <!-- Search Bar -->
@@ -332,7 +332,7 @@ const onSearchHandler = (e: any) => {
                         class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-xl shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all" />
                 </div>
 
-                 <!-- Sort -->
+                <!-- Sort -->
                 <div class="w-full sm:w-48">
                     <label class="block mb-2 text-sm font-medium text-gray-700">Sort by</label>
                     <select v-model="sort" class="w-full px-4 py-2 border rounded-xl shadow-sm">

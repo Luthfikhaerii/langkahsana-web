@@ -26,20 +26,20 @@ onUnmounted(() => {
 </script>
 
 <template>
-    <section class="w-full px-4 md:px-8 mx-auto max-w-6xl">
+    <section class="w-full px-4 md:px-8 mx-auto max-w-7xl">
         <div class="pb-8">
             <h2 class="text-3xl font-bold text-black mr-4">
                 Discover The Best Experience
             </h2>
             <p>Event terbaru yang sedang diadakan</p>
         </div>
-        <div class="relative max-w-6xl mx-auto overflow-hidden rounded-md shadow-xl">
-            <div class="max-w-6xl mx-auto overflow-hidden">
+        <div class="relative max-w-7xl mx-auto overflow-hidden rounded-sm shadow-xl">
+            <div class="max-w-7xl mx-auto overflow-hidden">
                 <!-- Container Slide -->
                 <div class="flex transition-transform duration-700 ease-in-out"
                     :style="{ transform: `translateX(-${current * 100}%)` }">
                     <div v-for="(img, index) in images" :key="index"
-                        class="min-w-full h-[250px] md:h-[250px] flex-shrink-0">
+                        class="max-w-7xl w-full h-[250px] md:h-[250px] flex-shrink-0">
                         <img :src="img" alt="carousel image" class="object-cover w-full h-full" />
                     </div>
                 </div>

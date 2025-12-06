@@ -178,7 +178,7 @@ const prevId = () => { if (idFilter.value > 1) idFilter.value--; };
 
 <template>
     <!-- HERO ARTICLE -->
-    <section class="max-w-6xl px-4 md:px-8 mx-auto pt-24">
+    <section class="max-w-7xl px-4 md:px-8 mx-auto pt-24">
         <div class="pb-8">
             <h2 class="text-3xl font-bold text-black">News Article</h2>
             <p>Catatan perjalanan dan tips trik</p>
@@ -190,7 +190,7 @@ const prevId = () => { if (idFilter.value > 1) idFilter.value--; };
 
     <!-- LIST ARTICLES -->
     <section class="pt-16 relative bg-[#FAFAFA] z-30 pb-16">
-        <div class="mx-auto max-w-6xl px-4 md:px-8">
+        <div class="mx-auto max-w-7xl px-4 md:px-8">
 
             <h2 class="text-3xl font-bold text-black">All Articles</h2>
 
