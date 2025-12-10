@@ -343,7 +343,7 @@ const onSearchHandler = (e: any) => {
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <CardTrip v-for="trip in trips" :key="trip.id" :title="trip.title" :date="trip.date"
+                <CardTrip v-for="trip in trips" :key="trip.id" :id="trip.id" :title="trip.title" :date="trip.date"
                     :status="trip.status" :price="trip.price" :image="trip.image" :location="trip.location"
                     :duration="trip.duration" :kuota="trip.kuota" :description="trip.description" />
             </div>

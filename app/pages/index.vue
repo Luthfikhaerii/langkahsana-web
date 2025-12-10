@@ -26,7 +26,7 @@ const trips = [
         duration: "04.30–10.30",
         kuota: "30 peserta",
         price: "Rp 35.000",
-        status: "Mudah",
+        status: true,
         image:
             "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=60",
         description:
@@ -177,7 +177,7 @@ const articles = [
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <CardTrip v-for="trip in trips" :key="trip.id" :title="trip.title" :date="trip.date"
-                    :status="trip.status" :price="trip.price" :image="trip.image" :location="trip.location"
+                    :status="trip.status" :id="trip.id" :price="trip.price" :image="trip.image" :location="trip.location"
                     :duration="trip.duration" :kuota="trip.kuota" :description="trip.description" />
             </div>
         </div>

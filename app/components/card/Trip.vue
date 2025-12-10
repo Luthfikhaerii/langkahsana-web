@@ -1,5 +1,6 @@
 <script setup lang="ts">
-const { title, date, status, price, image,location,duration,kuota,description } = defineProps([
+const { id, title, date, status, price, image, location, duration, kuota, description } = defineProps([
+  'id',
   'title',
   'date',
   'status',
@@ -10,6 +11,11 @@ const { title, date, status, price, image,location,duration,kuota,description } 
   'kuota',
   'description'
 ])
+
+const router = useRouter()
+const clickDetail = ()=>{
+  router.push("/trip/"+id)
+}
 
 </script>
 <template>
@@ -40,10 +46,12 @@ const { title, date, status, price, image,location,duration,kuota,description } 
           {{ description }}
         </p>
       </div>
-
       <div class="flex justify-between items-center mt-4">
         <span class="font-bold text-langkahsana">{{ price }}</span>
-        <button v-if="status==true" class="bg-green-700 text-white text-sm px-4 py-2 rounded-md hover:bg-green-800 transition">
+        <button v-if="status == true"
+          class="bg-green-700 text-white text-sm px-4 py-2 rounded-md hover:bg-green-800 transition"
+          :onclick="clickDetail">
+
           Detail
         </button>
         <p v-else class="text-sm px-4 py-2 rounded-md transition">

@@ -1,5 +1,5 @@
 <template>
-  <div class="relative w-full h-screen overflow-hidden mb-16">
+  <div class="relative w-full h-[100vh] overflow-hidden mb-16">
 
     <!-- Background Image with Parallax -->
     <div 
@@ -28,7 +28,7 @@
         </h2>
 
         <!-- Big Highlight Text -->
-        <h1 class="text-white text-6xl md:text-8xl lg:text-8xl font-bold tracking-tight mb-8">
+        <h1 class="text-white text-6xl md:text-8xl lg:text-7xl font-bold tracking-tight mb-8">
           {{ slide.highlight }}
         </h1>
 
@@ -43,14 +43,8 @@
       </div>
     </div>
 
-    <!-- Bottom Left - Sound Wave Icon -->
-    <div class="absolute bottom-12 left-8 md:left-16 z-20">
-      <button class="flex gap-1 items-end hover:scale-110 transition-transform duration-300">
-        <div class="w-1 h-4 bg-white/70 animate-pulse"></div>
-        <div class="w-1 h-6 bg-white/70 animate-pulse" style="animation-delay: 0.2s"></div>
-        <div class="w-1 h-3 bg-white/70 animate-pulse" style="animation-delay: 0.4s"></div>
-        <div class="w-1 h-5 bg-white/70 animate-pulse" style="animation-delay: 0.6s"></div>
-      </button>
+          <div class="h-[10vh] w-full bg-gradient-to-t from-white via-white/30 to-transparent absolute bottom-0 z-30">
+
     </div>
   </div>
 </template>
