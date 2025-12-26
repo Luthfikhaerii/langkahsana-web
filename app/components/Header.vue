@@ -25,8 +25,8 @@ onUnmounted(() => {
   <nav class="fixed top-0 w-full z-50 p-4">
     <div
       :class="[
-        'max-w-7xl mx-auto flex items-center justify-between px-6 py-3 rounded-xl backdrop-blur-md shadow-xl transition duration-200',
-        scrolled ? 'bg-langkahsana' : 'bg-white/10'
+        'max-w-7xl mx-auto flex items-center justify-between px-8 py-3 rounded-xl transition duration-200',
+        scrolled ? 'bg-langkahsana shadow-xl' : 'bg-transparent'
       ]"
     >
 
