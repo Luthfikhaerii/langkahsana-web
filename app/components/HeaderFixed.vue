@@ -22,10 +22,10 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <nav class="fixed top-0 w-full z-50 p-4">
+  <nav class="fixed top-0 w-full z-50 md:p-4 p-2">
     <div
       :class="[
-        'max-w-7xl mx-auto flex items-center justify-between px-8 py-3 rounded-xl backdrop-blur-md shadow-lg transition duration-200 bg-langkahsana'
+        'max-w-7xl mx-auto flex items-center justify-between md:px-8 px-4 py-3 rounded-xl backdrop-blur-md shadow-lg transition duration-200 bg-langkahsana'
       ]"
     >
 
