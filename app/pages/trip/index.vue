@@ -314,7 +314,7 @@ const onSearchHandler = (e: any) => {
     <Slider />
     <section class="py-16 relative bg-[#FAFAFA] z-30">
         <div class="mx-auto max-w-7xl px-4 md:px-8">
-            <h2 class="text-3xl font-bold text-black mr-4">
+            <h2 class="text-3xl font-bold text-langkahsana mr-4">
                 All Events & Trip
             </h2>
             <div

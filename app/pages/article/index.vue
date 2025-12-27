@@ -180,7 +180,7 @@ const prevId = () => { if (idFilter.value > 1) idFilter.value--; };
     <!-- HERO ARTICLE -->
     <section class="max-w-7xl px-4 md:px-8 mx-auto pt-24">
         <div class="pb-8">
-            <h2 class="text-3xl font-bold text-black">News Article</h2>
+            <h2 class="text-3xl font-bold text-langkahsana">News Article</h2>
             <p>Catatan perjalanan dan tips trik</p>
         </div>
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -256,7 +256,7 @@ const prevId = () => { if (idFilter.value > 1) idFilter.value--; };
     <section class="pt-8 relative bg-[#FAFAFA] z-30 pb-16">
         <div class="mx-auto max-w-7xl px-4 md:px-8">
 
-            <h2 class="text-3xl font-bold text-black">All Articles</h2>
+            <h2 class="text-3xl font-bold text-langkahsana">All Articles</h2>
 
             <!-- FILTER CONTROLS -->
             <div class="w-full mb-8 flex flex-col sm:flex-row justify-between items-end gap-8">

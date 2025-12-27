@@ -40,19 +40,19 @@
     <template>
       <div class="min-h-screen bg-stone-50">
         <!-- Our Story Section -->
-        <section class="py-24 bg-stone-50">
+        <section class="py-32 bg-stone-50">
           <div class="max-w-6xl mx-auto px-6">
             <div class="grid md:grid-cols-2 gap-16 items-center">
               <div class="space-y-6">
                 <div class="inline-block">
                   <span class="text-sm font-bold text-amber-600 uppercase tracking-widest border-2 border-amber-600 px-4 py-2">
-                    Cerita Kami
+                    About Us
                   </span>
                 </div>
                 <h2 class="text-5xl font-black text-emerald-900 leading-tight">
                   Dari Hobi Menjadi Gerakan
                 </h2>
-                <div class="space-y-4 text-stone-700 leading-relaxed">
+                <div class="space-y-4 text-sm text-stone-700 leading-relaxed">
                   <p>
                     LangkahSana lahir dari kecintaan sekelompok pendaki terhadap alam Indonesia dan kegelisahan akan minimnya pemahaman geografi di kalangan masyarakat umum.
                   </p>
@@ -68,12 +68,11 @@
                 </div>
               </div>
               <div class="relative">
-                <div class="absolute -top-6 -left-6 w-full h-full border-4 border-amber-400 rounded-md"></div>
                 <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=800&q=80" 
                      alt="Hiking Community" 
                      class="relative rounded-md shadow-2xl w-full h-[500px] object-cover"/>
                 <div class="absolute -bottom-8 -right-8 bg-emerald-900 text-white p-6 rounded-md shadow-xl">
-                  <div class="text-4xl font-black mb-1">2018</div>
+                  <div class="text-4xl font-black mb-1">2023</div>
                   <div class="text-sm font-semibold uppercase tracking-wide">Established</div>
                 </div>
               </div>
@@ -82,14 +81,14 @@
         </section>
     
         <!-- Team Section -->
-        <section class="py-24 bg-stone-50">
-          <div class="max-w-7xl mx-auto px-6">
+        <section class="py-16 bg-stone-50">
+          <div class="max-w-6xl mx-auto md:px-8 px-4">
             <div class="text-center mb-16">
               <span class="text-sm font-bold text-amber-600 uppercase tracking-widest border-2 border-amber-600 px-4 py-2 inline-block">
-                Tim Kami
+                Our Team
               </span>
               <h2 class="text-5xl font-black text-emerald-900 mt-6 mb-6">Orang-Orang di Balik LangkahSana</h2>
-              <p class="text-stone-600 text-lg max-w-2xl mx-auto">
+              <p class="text-stone-600 text-md max-w-2xl mx-auto">
                 Dipimpin oleh pendaki berpengalaman dan educator passionate tentang alam Indonesia
               </p>
             </div>
@@ -97,7 +96,7 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div v-for="(member, index) in team" :key="index" 
                    class="group cursor-pointer">
-                <div class="relative overflow-hidden rounded-xl mb-4">
+                <div class="relative overflow-hidden rounded-md mb-4">
                   <img :src="member.image" :alt="member.name" 
                        class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500"/>
                   <div class="absolute inset-0 bg-gradient-to-t from-emerald-900/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

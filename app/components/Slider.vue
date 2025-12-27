@@ -28,7 +28,7 @@ onUnmounted(() => {
 <template>
     <section class="w-full px-4 md:px-8 mx-auto max-w-7xl">
         <div class="pb-8">
-            <h2 class="text-3xl font-bold text-black mr-4">
+            <h2 class="text-3xl font-bold text-langkahsana mr-4">
                 Discover The Best Experience
             </h2>
             <p>Event terbaru yang sedang diadakan</p>

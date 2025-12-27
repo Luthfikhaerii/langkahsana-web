@@ -33,10 +33,10 @@ const handleSubmit = () => {
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
         <!-- Left Side - Text Content -->
         <div class="space-y-6">
-          <p class="text-gray-500 text-lg font-medium">Let's talk</p>
+          <p class="text-yellow-500 text-lg font-medium">Let's talk</p>
           
-          <h2 class="text-5xl md:text-6xl lg:text-6xl font-extrabold text-gray-900 leading-tight">
-            HOW CAN WE<br>HELP YOU?
+          <h2 class="text-5xl md:text-4xl lg:text-6xl font-extrabold text-langkahsana leading-tight">
+            How Can We<br>Help You?
           </h2>
           
           <p class="text-gray-600 text-lg max-w-xl leading-relaxed">

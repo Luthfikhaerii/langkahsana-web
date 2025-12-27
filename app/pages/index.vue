@@ -159,7 +159,7 @@
             <div class="max-w-7xl px-4 md:px-8 mx-auto">
                 <div class="flex justify-between items-center mb-8 w-full">
                     <div>
-                        <h2 class="text-3xl font-bold text-black mr-4">
+                        <h2 class="text-3xl font-bold text-langkahsana mr-4">
                             Events
                         </h2>
                         <p>Event terdekat yang mungkin anda tertarik</p>
@@ -203,7 +203,7 @@
         </section>
     
         <!-- Values Section -->
-        <section class="py-16 bg-gradient-to-br from-emerald-900 to-teal-900 relative overflow-hidden">
+        <section class="py-32 bg-gradient-to-br from-emerald-900 to-teal-900 relative overflow-hidden">
           <!-- Background Pattern -->
           <div class="absolute inset-0 opacity-10">
             <div class="absolute inset-0" style="background-image: radial-gradient(circle, white 1px, transparent 1px); background-size: 30px 30px;"></div>
@@ -211,8 +211,7 @@
     
           <div class="relative max-w-7xl mx-auto px-6">
             <div class="text-center mb-12">
-              <span class="text-xs font-bold text-amber-400 uppercase tracking-widest">Nilai Kami</span>
-              <h2 class="text-3xl font-bold text-white mt-3 mb-4">Apa yang Kami Pegang Teguh</h2>
+              <h2 class="text-4xl font-bold text-white mt-3 mb-4">What We Strongly Believe In</h2>
               <p class="text-emerald-100 text-base max-w-2xl mx-auto">
                 Prinsip-prinsip yang memandu setiap langkah kami dalam membangun komunitas dan menyelenggarakan trip
               </p>
@@ -220,7 +219,7 @@
     
             <div class="grid md:grid-cols-4 gap-6">
               <!-- Value 1: Eksplorasi Berkelanjutan -->
-              <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-6 hover:bg-white/15 hover:border-amber-400 transition-all duration-300 group">
+              <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-md p-6 hover:bg-white/15 hover:border-amber-400 transition-all duration-300 group">
                 <div class="w-12 h-12 mb-4 group-hover:scale-110 transition-transform duration-300">
                   <svg class="w-full h-full text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
@@ -231,7 +230,7 @@
               </div>
     
               <!-- Value 2: Komunitas Solid -->
-              <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-6 hover:bg-white/15 hover:border-amber-400 transition-all duration-300 group">
+              <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-md p-6 hover:bg-white/15 hover:border-amber-400 transition-all duration-300 group">
                 <div class="w-12 h-12 mb-4 group-hover:scale-110 transition-transform duration-300">
                   <svg class="w-full h-full text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
@@ -242,7 +241,7 @@
               </div>
     
               <!-- Value 3: Edukasi & Konservasi -->
-              <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-6 hover:bg-white/15 hover:border-amber-400 transition-all duration-300 group">
+              <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-md p-6 hover:bg-white/15 hover:border-amber-400 transition-all duration-300 group">
                 <div class="w-12 h-12 mb-4 group-hover:scale-110 transition-transform duration-300">
                   <svg class="w-full h-full text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
@@ -253,7 +252,7 @@
               </div>
     
               <!-- Value 4: Keamanan Utama -->
-              <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-6 hover:bg-white/15 hover:border-amber-400 transition-all duration-300 group">
+              <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-md p-6 hover:bg-white/15 hover:border-amber-400 transition-all duration-300 group">
                 <div class="w-12 h-12 mb-4 group-hover:scale-110 transition-transform duration-300">
                   <svg class="w-full h-full text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
@@ -347,7 +346,7 @@
             <div class="max-w-7xl mx-auto px-4 md:px-8">
                 <div class="flex justify-between items-center mb-8 w-full">
                     <div>
-                        <h2 class="text-3xl font-bold text-black mr-4">
+                        <h2 class="text-3xl font-bold text-langkahsana mr-4">
                             Articles
                         </h2>
                         <p>Beberapa article terbaru yang mungkin anda suka</p>

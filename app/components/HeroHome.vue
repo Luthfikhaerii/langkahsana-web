@@ -35,7 +35,7 @@
         <!-- Subtitle Link -->
         <a
           href="#"
-          class="inline-flex items-center gap-2 text-yellow-400 text-sm tracking-widest hover:gap-4 transition-all duration-300"
+          class="inline-flex items-center gap-2 text-sm tracking-widest hover:gap-4 transition-all duration-300 text-white"
         >
           {{ slide.subtitle }}
           <span>→</span>
@@ -58,7 +58,7 @@ const slide = {
   id: 1,
   title: 'The call of the',
   highlight: 'LANGKAH JADI CERITA',
-  subtitle: 'SEE WHOLE SERIES',
+  subtitle: 'SEE WHOLE JOURNEY',
   image: '/images/Hero.jpg'
 }
 
