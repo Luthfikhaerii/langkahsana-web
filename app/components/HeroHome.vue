@@ -35,7 +35,7 @@
         <!-- Subtitle Link -->
         <a
           href="#"
-          class="inline-flex items-center gap-2 text-white text-sm tracking-widest hover:gap-4 transition-all duration-300"
+          class="inline-flex items-center gap-2 text-yellow-400 text-sm tracking-widest hover:gap-4 transition-all duration-300"
         >
           {{ slide.subtitle }}
           <span>→</span>

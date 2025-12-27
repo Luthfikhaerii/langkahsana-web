@@ -169,7 +169,7 @@ const articles3 = [
 // MENGAMBIL ID DARI ROUTER
 // ======================================
 const route = useRoute()
-const id = Number(route.params.id)
+const id = 3
 
 // Ambil artikel berdasarkan ID
 const article = articles.find(a => a.id === id)
@@ -216,7 +216,7 @@ const formatDate = (dateString) => {
       </p>
 
       <!-- Featured Image -->
-      <div class="mb-12 rounded-xl overflow-hidden">
+      <div class="mb-12 rounded-md overflow-hidden">
         <img :src="article.image" :alt="article.title" class="w-full h-auto" />
       </div>
 
@@ -228,7 +228,7 @@ const formatDate = (dateString) => {
             <p>{{ content.value }}</p>
           </div>
 
-          <figure v-else-if="content.type === 'IMAGE'" class="my-8 rounded-xl overflow-hidden">
+          <figure v-else-if="content.type === 'IMAGE'" class="my-8 rounded-md overflow-hidden">
             <img :src="content.value" alt="Article image" class="w-full h-auto" />
           </figure>
 

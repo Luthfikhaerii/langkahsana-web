@@ -183,13 +183,77 @@ const prevId = () => { if (idFilter.value > 1) idFilter.value--; };
             <h2 class="text-3xl font-bold text-black">News Article</h2>
             <p>Catatan perjalanan dan tips trik</p>
         </div>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <!-- Left: Large Featured Article (2 columns) -->
+        <div class="lg:col-span-2">
+          <ArticleDisplay 
+            :image="updated.image" 
+            :title="updated.title" 
+            :description="updated.description"
+            :category="updated.category" 
+          />
+        </div>
 
-        <ArticleDisplay :image="updated.image" :title="updated.title" :description="updated.description"
-            :category="updated.category" />
+        <!-- Right: 2 Smaller Articles Stacked (1 column) -->
+        <div class="lg:col-span-1 flex flex-col gap-6">
+          <!-- Card Article 1 -->
+          <div class="relative w-full h-[190px] rounded-sm overflow-hidden shadow-lg cursor-pointer group">
+            <!-- Background image -->
+            <img 
+              :src="filteredArticles[0]?.image" 
+              :alt="filteredArticles[0]?.title"
+              class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" 
+            />
+
+            <!-- Gradient overlay -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+
+            <!-- Text content -->
+            <div class="absolute bottom-0 p-4 text-white">
+              <h3 class="text-base font-bold mb-1 leading-tight line-clamp-2">
+                {{ filteredArticles[0]?.title }}
+              </h3>
+              <p class="text-xs text-gray-200 mb-2 line-clamp-2">
+                {{ filteredArticles[0]?.description }}
+              </p>
+              <p class="text-xs text-orange-400 uppercase font-semibold tracking-wide">
+                {{ filteredArticles[0]?.category }}
+              </p>
+            </div>
+          </div>
+
+          <!-- Card Article 2 -->
+          <div class="relative w-full h-[190px] rounded-sm overflow-hidden shadow-lg cursor-pointer group">
+            <!-- Background image -->
+            <img 
+              :src="filteredArticles[1]?.image" 
+              :alt="filteredArticles[1]?.title"
+              class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" 
+            />
+
+            <!-- Gradient overlay -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+
+            <!-- Text content -->
+            <div class="absolute bottom-0 p-4 text-white">
+              <h3 class="text-base font-bold mb-1 leading-tight line-clamp-2">
+                {{ filteredArticles[1]?.title }}
+              </h3>
+              <p class="text-xs text-gray-200 mb-2 line-clamp-2">
+                {{ filteredArticles[1]?.description }}
+              </p>
+              <p class="text-xs text-orange-400 uppercase font-semibold tracking-wide">
+                {{ filteredArticles[1]?.category }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </section>
 
     <!-- LIST ARTICLES -->
-    <section class="pt-16 relative bg-[#FAFAFA] z-30 pb-16">
+    <section class="pt-8 relative bg-[#FAFAFA] z-30 pb-16">
         <div class="mx-auto max-w-7xl px-4 md:px-8">
 
             <h2 class="text-3xl font-bold text-black">All Articles</h2>

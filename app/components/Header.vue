@@ -29,7 +29,6 @@ onUnmounted(() => {
         scrolled ? 'bg-langkahsana shadow-xl' : 'bg-transparent'
       ]"
     >
-
       <!-- Logo -->
       <NuxtLink to="/" class="flex items-center space-x-2">
         <span class="text-2xl font-bold text-white">Langkahsana</span>
@@ -53,6 +52,7 @@ onUnmounted(() => {
       <!-- Desktop menu -->
       <ul class="hidden md:flex md:space-x-8 text-white text-md font-medium">
         <li><NuxtLink to="/" class="hover:text-gray-300">Home</NuxtLink></li>
+        <li><NuxtLink to="/about" class="hover:text-gray-300">About</NuxtLink></li>
         <li><NuxtLink to="/article" class="hover:text-gray-300">Article</NuxtLink></li>
         <li><NuxtLink to="/trip" class="hover:text-gray-300">Event</NuxtLink></li>
         <li><NuxtLink to="/contact" class="hover:text-gray-300">Contact</NuxtLink></li>
@@ -60,9 +60,10 @@ onUnmounted(() => {
     </div>
 
     <!-- Mobile menu -->
-    <div v-if="isOpen" class="md:hidden mt-3 bg-langkahsana rounded-xl shadow-xl px-6 py-4">
+    <div v-if="isOpen" class="md:hidden mt-3 bg-langkahsana rounded-md shadow-xl px-6 py-4">
       <ul class="flex flex-col space-y-3 text-white text-md font-medium">
         <li><NuxtLink @click="isOpen = false" to="/">Home</NuxtLink></li>
+        <li><NuxtLink @click="isOpen = false" to="/about">About</NuxtLink></li>
         <li><NuxtLink @click="isOpen = false" to="/article">Article</NuxtLink></li>
         <li><NuxtLink @click="isOpen = false" to="/trip">Event</NuxtLink></li>
         <li><NuxtLink @click="isOpen = false" to="/contact">Contact</NuxtLink></li>
