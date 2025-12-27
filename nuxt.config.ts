@@ -1,7 +1,18 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  imports:{
-    autoImport:true
+  app: {
+    head: {
+      title: 'Langkahsana', // default fallback title
+      htmlAttrs: {
+        lang: 'en',
+      },
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.jpg' },
+      ],
+    },
+  },
+  imports: {
+    autoImport: true
   },
   googleFonts: {
     families: {
@@ -14,7 +25,7 @@ export default defineNuxtConfig({
   },
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss','@nuxt/image','@nuxtjs/google-fonts','@nuxt/icon'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxt/image', '@nuxtjs/google-fonts', '@nuxt/icon'],
   tailwindcss: {
     configPath: '~/tailwind.config.ts', // Adjust path as needed
   },
