@@ -19,7 +19,7 @@ const { id, title, date, description, image, category } = defineProps([
             <h3 class="text-base font-semibold mb-2">
                 {{ title }}
             </h3>
-            <p class="mb-4 text-sm text-gray-600 line-clamp-2">
+            <p class=" text-sm text-gray-600 line-clamp-2">
                 {{ description }}
             </p>
         </div>

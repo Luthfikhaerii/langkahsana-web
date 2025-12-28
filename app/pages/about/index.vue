@@ -71,7 +71,7 @@
                 <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=800&q=80" 
                      alt="Hiking Community" 
                      class="relative rounded-md shadow-2xl w-full h-[500px] object-cover"/>
-                <div class="absolute -bottom-8 -right-8 bg-emerald-900 text-white p-6 rounded-md shadow-xl">
+                <div class="absolute -bottom-3 -right-3 bg-emerald-900 text-white p-6 rounded-md shadow-xl">
                   <div class="text-4xl font-black mb-1">2023</div>
                   <div class="text-sm font-semibold uppercase tracking-wide">Established</div>
                 </div>

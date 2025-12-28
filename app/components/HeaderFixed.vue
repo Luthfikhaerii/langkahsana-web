@@ -31,6 +31,7 @@ onUnmounted(() => {
 
       <!-- Logo -->
       <NuxtLink to="/" class="flex items-center space-x-2">
+        <img src="/logo_putih.png" class="w-10"/>
         <span class="text-2xl font-bold text-white">Langkahsana</span>
       </NuxtLink>
 
