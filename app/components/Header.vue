@@ -25,7 +25,7 @@ onUnmounted(() => {
   <nav class="fixed top-0 w-full z-50 p-4">
     <div
       :class="[
-        'max-w-7xl mx-auto flex items-center justify-between px-8 py-3 rounded-xl transition duration-200',
+        'max-w-7xl mx-auto flex items-center justify-between md:px-8 px-4 py-3 rounded-xl transition duration-200',
         scrolled ? 'bg-langkahsana shadow-xl' : 'bg-transparent'
       ]"
     >
@@ -51,7 +51,7 @@ onUnmounted(() => {
       </button>
 
       <!-- Desktop menu -->
-      <ul class="hidden md:flex md:space-x-8 text-white text-md font-medium">
+      <ul class="hidden md:flex md:space-x-10 text-white text-md font-normal mr-4">
         <li><NuxtLink to="/" class="hover:text-gray-300">Home</NuxtLink></li>
         <li><NuxtLink to="/about" class="hover:text-gray-300">About</NuxtLink></li>
         <li><NuxtLink to="/article" class="hover:text-gray-300">Article</NuxtLink></li>
@@ -62,7 +62,7 @@ onUnmounted(() => {
 
     <!-- Mobile menu -->
     <div v-if="isOpen" class="md:hidden mt-3 bg-langkahsana rounded-md shadow-xl px-6 py-4">
-      <ul class="flex flex-col space-y-3 text-white text-md font-medium">
+      <ul class="flex flex-col space-y-3 text-white text-md font-normal">
         <li><NuxtLink @click="isOpen = false" to="/">Home</NuxtLink></li>
         <li><NuxtLink @click="isOpen = false" to="/about">About</NuxtLink></li>
         <li><NuxtLink @click="isOpen = false" to="/article">Article</NuxtLink></li>

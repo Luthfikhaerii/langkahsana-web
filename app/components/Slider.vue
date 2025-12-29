@@ -33,7 +33,7 @@ onUnmounted(() => {
             </h2>
             <p>Event terbaru yang sedang diadakan</p>
         </div>
-        <div class="relative max-w-7xl mx-auto overflow-hidden rounded-sm shadow-xl">
+        <div class="relative max-w-7xl mx-auto overflow-hidden rounded-lg shadow-xl">
             <div class="max-w-7xl mx-auto overflow-hidden">
                 <!-- Container Slide -->
                 <div class="flex transition-transform duration-700 ease-in-out"

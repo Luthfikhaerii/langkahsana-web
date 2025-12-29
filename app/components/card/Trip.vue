@@ -19,7 +19,7 @@ const clickDetail = ()=>{
 
 </script>
 <template>
-  <div class="bg-white rounded-sm shadow-sm overflow-hidden hover:shadow-md transition">
+  <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-md transition">
     <div class="relative">
       <img :src="image" :alt="title" class="h-48 w-full object-cover" loading="lazy" />
     </div>
